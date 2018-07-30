@@ -1,0 +1,244 @@
+
+
+@media only screen and (min-width: 992px) {
+	.mobile--version{
+		display: none;
+	}
+	.desktop--version{
+		background-color: #fafafa;
+	}
+	a{
+		color: rgb(0, 22, 68);
+	}
+	.main--container{
+		display: flex;
+		padding-top: 55px;
+		flex-direction: column;
+		direction: rtl;
+		margin: 0px 4em;
+		background-color: #ffffff;
+		align-items: center;
+	}
+	hr{
+		background-color: black;
+		width: 100%;
+
+	}
+	.share--tag{
+		align-self: flex-end;
+		position: relative;
+		width: fit-content;
+		text-align: center;
+		direction: rtl;
+		margin-bottom: 5px;
+	}
+	.share--tag span{
+		background-color: red;
+		text-align: center;
+		padding: 1px 2px;
+		margin:0px 2px;
+		transition: all .5s linear;
+	}
+	.share--tag span:hover{
+		box-shadow: 0px 5px 10px black;
+		background-color: blue;
+	}
+
+	.main--container img{
+		width: 100%;
+		align-self: center;
+	}
+	.img--container{
+		width: 80%;
+		height: 80%;
+		align-self:center;
+		position: relative;
+		overflow: hidden;
+	}
+	.img--container .tag{
+		position: absolute;
+		right: 5px;
+		top: 10px;
+		z-index: 50;
+	}
+	.article--container{
+		width: 75%;
+		height: auto;
+		align-self: center;
+		display: flex;
+		flex-direction: column;
+		direction: rtl;
+		position: relative;
+		text-align: justify;
+		/*overflow: hidden;*/
+		padding: 10px;
+	}
+	.article{
+		width: 100%;
+		height: auto;
+		align-self: center;
+		display: flex;
+		flex-direction: column;
+		direction: rtl;
+		overflow: hidden;
+	}
+	.article img{
+		width: 100%;
+		height: 100%;
+		margin: 8px 0px;
+		border-top: 1px solid black;
+		border-bottom: 1px solid black;
+	}
+	.article .img--info{
+		position: absolute;
+		background-color: #030101b3;
+		right: -200px;
+		top: 40%;
+		height: 120px;
+		padding: 15px 10px;
+		color: white;
+		border-radius: 2px;
+		overflow: hidden;
+		transition: all 1s ease-in-out;
+	}
+	.article--caption{
+		width: 80%;
+		position: relative;
+	}
+	.article h4{
+
+	}
+	.block-qeue{
+		width: 70%;
+		border-right:5px solid red;
+		color:darkred;
+		padding: 5px;
+	}
+
+	.article .img--container:hover .img--info{
+		right: 0px;
+	}
+	.img--info span{
+		transition: all .5s linear;
+	}
+	.img--info span:hover{
+		box-shadow: 0px 5px 10px black;
+	}
+	p{
+		line-height: 1.7em;
+		width: 100%;
+	}
+	h2{
+		padding-right: 5px;
+		border-right: 3px solid green;
+	}
+	.article--caption ul{
+		padding-right: 0px;
+		list-style: none;
+		margin: 10px 2px;
+	}
+	.article--caption ul li{
+		display: inline-block;
+		margin: 1px 5px;
+	}
+	.article--caption ul li span{
+		margin: 5px 5px 0px 5px;
+
+	}
+	.author--info{
+		display:flex;
+		direction: rtl;
+		max-height: 150px;
+		max-width: 450px;
+		margin: 10px 10px;
+	}
+	.author--info--img img{
+		height: 50px;
+		width: 50px;
+		border-radius: 50%;
+	}
+	.author--info h5,h6{
+		display: block;
+		margin-bottom: 3px;
+	}
+	.author--info--text{
+		margin-right: 5px;
+		margin-top: 4px;
+		text-align: right;
+	}
+	.related--news--container{
+		margin: 25px 70px;
+		display: flex;
+		flex-direction: row;
+		direction: rtl;
+		justify-content: space-around;
+		background-color: #F0F0F0;
+	}
+	.related--news--container img{
+		width: 100%;
+		height: 100%;
+
+	}
+	.news--card--related{
+		width: 24%;
+		min-height: 440px;
+		overflow: hidden;
+		border-bottom: .5px solid black;
+		position: relative;
+		box-shadow: 2px 2px 8px black;
+		transition: all .2s linear;
+		border-radius: 1px;
+		background-color: #ffffff;
+	}
+	.news--card--related:hover{
+		box-shadow: 2px 7px 8px black;
+		transform: translateZ(10px);
+	}
+		
+	.news--card--related h2{
+		margin: 2px;
+	}
+	.news--card--related p{
+		height: 30%;
+		overflow: hidden;
+		padding: 5px;
+	}
+	.news--card--related a{
+		position: relative;
+		bottom: -40px;
+		right: 4px;
+		color:green;
+	}
+	.related--card--img{
+		width: 100%;
+		height: 45%;
+
+	}
+	.related--card--img:hover{
+		border:1px solid black;
+	}
+	.related--tag{
+		display: flex;
+		width: 40%;
+		overflow: hidden;
+		flex-direction: row;
+		direction: rtl;
+		padding: 10px 0px;
+		flex-flow: wrap;
+	}
+	span{
+		padding: 5px 8px;
+		text-align: center;
+		margin: 1px 2px;
+		background-color: darkred;
+		font-size: .7em;
+	}
+	.naghle-ghol{
+		width: 70%;
+		align-self: center;
+		margin: 20px;
+		color: darkgrey;
+		text-align: right;
+	}
+
+} 

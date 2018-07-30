@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>typing script</title>
+    <style media="screen">
+      p {
+        direction: rtl;
+        font-size: 18px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="typing">سلام. این یک متن تست است.</p>
+    <script type="text/javascript">
+      var element = document.getElementById("typing");
+      var text = element.innerHTML;
+      var i = 0;
+      element.innerHTML = "";
+      var type = setInterval(typer,50)
+
+      function typer() {
+        if(i == text.length)
+        {
+          clearInterval(type);
+          return ;
+        }
+        element.innerHTML = element.innerHTML + text[i];
+        i++;
+      };
+    </script>
+  </body>
+</html>
