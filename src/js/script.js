@@ -316,6 +316,10 @@ $(".navbar").on("mouseenter", function() {
     });
 
 
+
+
+
+
 })();
 $(document).ready(function() {
     var fwidth = $('.sec-2 .flex-card.first').width();
@@ -352,3 +356,9 @@ $(document).ready(function() {
         $("#draggable").draggable({ axis: "y" });
     });
 });
+
+var quadimages = document.querySelectorAll("#quad figure");
+for (i = 0; i < quadimages.length; i++) {
+    quadimages[i].addEventListener('click', function() { this.classList.toggle("expanded");
+        quad.classList.toggle("full") });
+}
