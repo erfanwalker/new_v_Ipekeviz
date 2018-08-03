@@ -124,37 +124,28 @@ $(".navbar").on("mouseenter", function() {
         lastScrollTop = currentScrollTop;
     });
     //parallax
+
     documentElem.on('scroll', function() {
         var currentScrollTop = $(this).scrollTop();
         parallaxElem.css('background-position', '50%' + -currentScrollTop / 4 + 'px');
-        if (currentScrollTop > 450) {
-            $('.left:eq(0)').css('opacity', '1');
-            $('.left:eq(0)').css('transform', 'translateY(0)');
-        }
-        if (currentScrollTop > 1100) {
-            $('.left:eq(1)').css('opacity', '1');
-            $('.left:eq(1)').css('transform', 'translateY(0)');
-        }
-        if (currentScrollTop > 1850) {
-            $('.left:eq(2)').css('opacity', '1');
-            $('.left:eq(2)').css('transform', 'translateY(0)');
-        }
-        if (currentScrollTop > 350) {
-            $('.right:eq(0)').css('opacity', '1');
-            $('.right:eq(0)').css('transform', 'translateY(0)');
-        }
-        if (currentScrollTop > 990) {
-            $('.right:eq(1)').css('opacity', '1');
-            $('.right:eq(1)').css('transform', 'translateY(0)');
-        }
-        if (currentScrollTop > 1300) {
-            $('.right:eq(2)').css('opacity', '1');
-            $('.right:eq(2)').css('transform', 'translateY(0)');
-        }
-        if (currentScrollTop > 2100) {
-            $('.right:eq(3)').css('opacity', '1');
-            $('.right:eq(3)').css('transform', 'translateY(0)');
-        }
+        // if (currentScrollTop > 220) {
+        //     $('.anim-book-txt:eq(0)').addClass('anim-book-txt-anim');
+        //     $('.inner:eq(0)').addClass('inner-d');
+        //     $('.anim-book-img:eq(0)').addClass('anim-book-img-anim');
+        // }
+        // if (currentScrollTop > 460) {
+        //     $('.anim-book-txt-alt:eq(0)').addClass('anim-book-txt-anim');
+        //     $('.inner:eq(1)').addClass('inner-d');
+        //     $('.anim-book-img-alt:eq(0)').addClass('anim-book-img-anim');
+        // }
+        // if (currentScrollTop > 680) {
+        //     $('.anim-op').addClass('anim-op-anim');
+        // }
+        // if (currentScrollTop > 1100) {
+        //     $('.anim-book-txt:eq(1)').addClass('anim-book-txt-anim');
+        //     $('.inner:eq(2)').addClass('inner-d');
+        //     $('.anim-book-img:eq(1)').addClass('anim-book-img-anim');
+        // }
     });
 
     introh1.addClass('intro--h1--anim');
@@ -260,7 +251,7 @@ $(".navbar").on("mouseenter", function() {
     }).on("mouseleave", function() {
         timer = setTimeout(function() {
             $('.social').children('.social-icon').slideUp('fast');
-            $('.social').stop(true, true).animate({ left: -14 + "px" }, 'fast');
+            $('.social').stop(true, true).animate({ left: 0 + "px" }, 'fast');
         }, 300)
     });
 
@@ -336,7 +327,36 @@ $(document).ready(function() {
     $('.sec-2 .flex-card.second').parent().css('background-position-y', "50%");
     $('.sec-2 .flex-card.first').parent().css('background-size', fbg_size);
     $('.sec-2 .flex-card.second').parent().css('background-size', sbg_size);
+    var first_elem_top_offset;
+    var second_elem_top_offset;
+    var third_elem_top_offset;
+    var forth_elem_top_offset;
+    var first_elem_h;
+    var second_elem_h;
+    var third_elem_h;
+    var forth_elem_h;
+    first_elem_top_offset = $('.first').offset().top;
+    second_elem_top_offset = $('.second').offset().top;
+    third_elem_top_offset = $('.third').offset().top;
+    forth_elem_top_offset = $('.forth').offset().top;
+
+    first_elem_h = $('.first').height();
+    second_elem_h = $('.second').height();
+    third_elem_h = $('.third').height();
+    forth_elem_h = $('.forth').height();
+    console.log("f", first_elem_top_offset, "se", second_elem_top_offset);
+
     $(window).resize(function() {
+        first_elem_top_offset = $('.first').offset().top;
+        second_elem_top_offset = $('.second').offset().top;
+        third_elem_top_offset = $('.third').offset().top;
+        forth_elem_top_offset = $('.forth').offset().top;
+
+        first_elem_h = $('.first').height();
+        second_elem_h = $('.second').height();
+        third_elem_h = $('.third').height();
+        forth_elem_h = $('.forth').height();
+
         var fwidth = $('.sec-2 .flex-card.first').width();
         var swidth = $('.sec-2 .flex-card.second').width();
         var fheight = $('.sec-2 .flex-card.first').height();
@@ -352,13 +372,36 @@ $(document).ready(function() {
         $('.sec-2 .flex-card.first').parent().css('background-size', fbg_size);
         $('.sec-2 .flex-card.second').parent().css('background-size', sbg_size);
     });
-    $(function() {
-        $("#draggable").draggable({ axis: "y" });
+    $(document).on('scroll', function() {
+        var currentScrollTop = $(window).scrollTop();
+        console.log('h', first_elem_h, 's-h', second_elem_h);
+        console.log('of', first_elem_top_offset, 's-o', second_elem_top_offset, 'c-s', currentScrollTop);
+        if (currentScrollTop >= ((first_elem_top_offset - first_elem_h) - (first_elem_h / 3))) {
+            $('.anim-book-txt:eq(0)').addClass('anim-book-txt-anim');
+            $('.inner:eq(0)').addClass('inner-d');
+            $('.anim-book-img:eq(0)').addClass('anim-book-img-anim');
+        }
+        if (currentScrollTop >= (third_elem_top_offset - third_elem_h) - (third_elem_h / 2)) {
+            $('.anim-book-txt-alt:eq(0)').addClass('anim-book-txt-anim');
+            $('.inner:eq(1)').addClass('inner-d');
+            $('.anim-book-img-alt:eq(0)').addClass('anim-book-img-anim');
+        }
+        if (currentScrollTop >= (second_elem_top_offset - second_elem_h) - (second_elem_h / 3)) {
+            $('.anim-op').addClass('anim-op-anim');
+        }
+        if (currentScrollTop >= (forth_elem_top_offset - forth_elem_h) - (forth_elem_h / 3)) {
+            $('.anim-book-txt:eq(1)').addClass('anim-book-txt-anim');
+            $('.inner:eq(2)').addClass('inner-d');
+            $('.anim-book-img:eq(1)').addClass('anim-book-img-anim');
+        }
     });
+
 });
 
 var quadimages = document.querySelectorAll("#quad figure");
 for (i = 0; i < quadimages.length; i++) {
-    quadimages[i].addEventListener('click', function() { this.classList.toggle("expanded");
-        quad.classList.toggle("full") });
+    quadimages[i].addEventListener('click', function() {
+        this.classList.toggle("expanded");
+        quad.classList.toggle("full")
+    });
 }

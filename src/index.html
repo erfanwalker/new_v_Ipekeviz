@@ -7,633 +7,468 @@
     <title> ترکیه | ازمیر</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
-    <div class="mobile--version">
-        <header class="navbar--main--container">
-            <div class="navbar--progressbar"> </div>
-            <div class="navbar--menu--icon" onclick="menuIcon(this)" onclick="showMenu(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
-            <h1 style="display: inline;position: absolute;top:5px;left:5px;">
-                <span>IPEK </span>
-                <span>EVIZ</span>
-            </h1>
-        </header>
-        <div class="menu--main--container" id="menu">
+
+    <!--navbar-->
+
+    <nav class="navbar">
+        <div class=" navbar-collapse-btn"><i class="fa fa-reorder"></i></div>
+        <div class="navbar--menu">
             <ul>
                 <li>
-                    <a href="#">خانه</a>
+                    <a href="index.html"><i class="fa fa-home"></i></a>
                 </li>
                 <li>
-                    <a href="#">اخبار</a>
+                    <a href="news_d_page.html">اخبار</a>
                 </li>
                 <li>
-                    <a href="#">گالری</a>
+                    <a href="last_rules.html">آخرین قوانین</a>
                 </li>
                 <li>
-                    <a href="#">منو</a>
+                    <a href="investment opportunities.html">فرصت های سرمایه گذاری</a>
                 </li>
                 <li>
-                    <a href="#">درباره ما</a>
+                    <a href="gallery.html">گالری</a>
+                </li>
+                <li class="drop-down">
+                    <a>مشاوره</a>
+                    <ul class="drop-down-item">
+                        <li><a href="Immigration advice.html">مشاوره مهاجرتی</a></li>
+                        <li><a href="Academic advice.html">مشاوره تحصیلی</a></li>
+                        <li><a href="Investment Advice.html">مشاوره سرمایه گذاری</a></li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="#">تماس با ما</a>
+                    <a href="about_us.html">درباره ما</a>
+                </li>
+                <li>
+                    <a href="contact_us.html">ارتباط با ما</a>
                 </li>
             </ul>
         </div>
-        <div class="button--scroll-up" href="#">^</div>
-        <div class="site">
-            <!--secvtion 1 -->
-            <div class="welcome--container">
-                <div class="first-p--container">
-                    <p id="welcome-p">به سایت اوپیک ویز خوش آمدید</p>
-                    <p id="text-p">سعی کنید بهترین ها رو برای خودتون انتخاب کنید</p>
-                </div>
-                <div class="text-p--container">
-                    <p id="text-p">
-                        <span>بهترین انتخاب </span>را برای خود انجام دهید چون هیچکس آنرا برایتان انجام نمیدهد</p>
-                </div>
-            </div>
-            <!--/secvtion 1 -->
-            <!--section 2-->
-            <div class="intro--caption--container">
-                <p>چرا باید
-                    <strong>اوپیک اویز</strong> را انتخاب کنم؟</p>
-                <hr>
-            </div>
-
-            <!--intro-cards-->
-            <div class="intro--card-1">
-                <p>معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفا به مشتری یا صاحب کار خود نشان دهند</p>
-            </div>
-            <div class="intro--card-2">
-                <p>از آنجایی که طراحان عموما نویسنده متن نیستند و وظیفه رعایت حق تکثیر متون را ندارند</p>
-            </div>
-            <div class="intro--card-3">
-                <p>صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل</p>
-            </div>
-            <!--/intro-cards-->
-            <!--/section 2-->
-
-            <!--section 3-->
-            <!--news caption-->
-            <div class="news--caption--container">
-                <hr>
-                <h3 class="news--caption--text">گزیده خبر ها</h1>
-                    <hr>
-            </div>
-            <!--/news caption-->
-            <!--card news-->
-            <div class="news--main-container">
-                <div class="news--card--container">
-                    <img src="content/images/turkey3.jpg">
-                    <div class="news--card--overlay"> </div>
-                    <div class="news--card 1">
-                        <div class="news--tag--container">
-                            <a href="#">جدید</a>
-                        </div>
-                        <div class="news--card--caption">
-                            <h5>این یک متن بی معنی است</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="news--card--container">
-                    <img src="content/images/turkey5.jpg">
-                    <div class="news--card--overlay"> </div>
-                    <div class="news--card 2">
-                        <div class="news--tag--container">
-                            <a href="#">بهترین</a>
-                        </div>
-                        <div class="news--card--caption">
-                            <h5>این یک متن بی معنی است</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="news--card--container">
-                    <img src="content/images/turkey12.jpg">
-                    <div class="news--card--overlay"> </div>
-                    <div class="news--card 3">
-                        <div class="news--tag--container">
-                            <a href="#">هفته</a>
-                        </div>
-                        <div class="news--card--caption">
-                            <h5>این یک متن بی معنی است</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="news--card--container">
-                    <img src="content/images/turkey14.jpg">
-                    <div class="news--card--overlay"> </div>
-                    <div class="news--card 4">
-                        <div class="news--tag--container">
-                            <a href="#">منتخب</a>
-                        </div>
-                        <div class="news--card--caption">
-                            <h5>این یک متن بی معنی است</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="news--card--container">
-                    <img src="content/images/turkey6.jpg">
-                    <div class="news--card--overlay"> </div>
-                    <div class="news--card 5">
-                        <div class="news--tag--container">
-                            <a href="#">داخلی</a>
-                            <a href="#">ماهانه</a>
-                        </div>
-                        <div class="news--card--caption">
-                            <h5>dfasfdsfasdfsfsafasfadfasdfasdfasdfsdfsdfsdfsdfsdfsdfsdf
-                                <br>sdfsdfsdfsdfdsfsdfsdfsdfsdfsdfsdfsdfsdfsdfاین یک متن بی معنی است</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="news--card--container">
-                    <img src="content/images/turkey17.jpg">
-                    <div class="news--card--overlay"> </div>
-                    <div class="news--card 6">
-                        <div class="news--tag--container">
-                            <a href="#">خارجی</a>
-                        </div>
-                        <div class="news--card--caption">
-                            <h5>این یک متن بی معنی است</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/card news-->
-            <!--/section 3-->
-
-            <!--secion 4-->
-            <!--site sections-->
-            <div class="site-setcion--container">
-
-            </div>
-            <!--/section 4-->
-            <!--/site sections-->
-
-            <!--section 5-->
-            <!--Map-->
-            <div class="map--container">
-                <div id="map" class="map"></div>
-            </div>
-            <!--/Map-->
-            <!--/section 5-->
-
-            <!--section 6-->
-            <!--footer-->
-            <div class="footer--section--container">
-                <div class="footer--section--social">
-                    <div class="social--icon">
-                        <span>
-                            <img src="content/icon/Facebook.png">
-                        </span>
-                    </div>
-                    <div class="social--icon">
-                        <span>
-                            <img src="content/icon/Google plus.png">
-                        </span>
-                    </div>
-                    <div class="social--icon">
-                        <span>
-                            <img src="content/icon/Linkedin.png">
-                        </span>
-                    </div>
-                    <div class="social--icon">
-                        <span>
-                            <img src="content/icon/Pinterest.png">
-                        </span>
-                    </div>
-                    <div class="social--icon">
-                        <span>
-                            <img src="content/icon/Tumblr.png">
-                        </span>
-                    </div>
-                    <div class="social--icon">
-                        <span>
-                            <img src="content/icon/Twitter.png">
-                        </span>
-                    </div>
-                </div>
-                <div class="footer--section--content">
-                    <div style="margin: auto">
-                        <h1>
-                            <span style="color: rgba(105, 228, 152, 0.788)">IPEK</span> EVIZ</h1>
-                    </div>
-                    <div class="input--container">
-                        <input type="text" class="input--email" id="email" name="email" placeholder="برای عضویت در خبرنامه ایمیل خود را وارد کنید">
-                        <input type="submit" class="button--email--submit" id="submit" value="عضویت">
-                    </div>
-                </div>
-                <div class="footer--section--info">
-                    <div>
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAR8SURBVGhD7Zl5yGZTHIA/RtaxjVEYZCvFTCj7EtmTTEK2KcOIRkMof4hsZS+7hBRKlpIUNZoZjQZDMWUylsianazZmXmeX07eee+973fvfd9735fmqaev37nLOe/97jnnd84dW8X/nNVxX7weX8KP8Xf8Ad/Ep3E2TsGRZTouw+Ul/AsfwK1xZNgYfdKpke/gtbg/bo4TcB3cAU/Eh/Fn9Fz/no1DZzt8G23UZ3gGroHjsQXeh3+j196Jq+FQmIQ+fRuyGDfDqhyHP6H3uMaCtvHpzUcb8CKujXVxcPgN/e+cYEGbnIT+CEelTS3ok9PR+32K61rQBmviu2jFp1gwDuthmX7zHHrPSyJqgSPQCpdiUQddCy/FD9Fz/8SFeBAW4SvmuR9E1AJ3oRVeHFEWf0R6uuoQ67yRftCZWMR76Hm7RdQwb6GVTY0oy9Xo8ffxYHQe2QCvQDu0Hds5JY/b0GsvjKhh0nDpk+/GRn+DHt/bgi7uR49dF1GWc9HjN0XUIOujFX0dUZZt0OOOPnkcgx5/JqIszisefzSiBpmIVvRtRFmcFD3+PeYNBCejx5+MKIvziMcfiahhzGatrGgSTEPzjIj+xcx4EXrsIgtyOA89fntEDfM6WtkeEWVJk9uvaAffC4/CBWj557gh5mH+5Tn2lcYx/bay8yPKx87sOd1+gUUPQN5AzzNzbpzT0Mqej6iYA/FBfAWdV67CyVjEzuh9f8S8EXHguMZwPnCS29KCAeFr6A95IqKWMN2w0l6vV1XSa2VC2hoz0UqXRNQ/u6P3+w77WRJUxlT7K7Ry05B+cQL0XjdH1DKXo5XPjag+2+Mf6Pw0lM0IRyDzLjv+LhbUxMnPB+KwPjRSturOSB0cAU3zfRg7WTAstsJf0Ib0muiKuAd9EI9HNGTc/bAxDslV8D+Q+kbR+qRVXDR9if6Yoy0oiRmw19wa0YhwDtooV49l0ovD0POdN3qlLQNjTzy0wAMw4S6JmxE2zpyqF85BKdW/wIJ/8Afl1ZOsnQ5thKbiVljk4ZjYD9OavNcIdAN6rVlB5zbRY9h9/05NQGsxC72Bm3DzCuxeAN2LXvMCupDqxt0RO7i7Kf63E9ti3v2TPiA/TdTavHsWbdSpEZVjE0wd337TiRsTr6LH7rCgAilJdalcCecH03RnbncKq3A8WqnrdjcjEu6DWe7elZsYVTgLvfapiCrgmtoLH4qoOikJ9BWzH/gapY3qQ7Aq7vx7vXNOpb3m19CGuNaugyOQa3PvYUabRqmqr1QnLri8x5yISjANvcD1dZnN5yKORP8D3ktdOPWz055eWT9jlMLPZl4wiC0Zdwy9l8N4PxmyuOCy3/lwxk1pHDI/Qivfx4I+8ROEmw+D2t5J20WXRdQDdz480U9qg8IheVC4GrV9frfsyd3oiVdGNHr4xnyCtrFzQl0Jkz33dD1pRwtGlBvRNt4SUQ7Hoie8HNHosivaTof33FHVVZonOJm5Kz7Kpm8wDvErUSbTHUUzGbFZqR39v2bjX7ZWUY+xsRXIj5aKDOr17wAAAABJRU5ErkJggg==">
-                        <p>تهران-خیابان جمهوری-کوچه شمسی-پلاک 321</p>
-                    </div>
-
-                    <div>
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPASURBVGhD7ZlXiFRJFIbHsEZWMWJasygm0BdFDIv6IoLgIuKbIIqIiuCDIiK+6YugKJhF0TUgrOlhXTHgqogPigETRswR45p11+9rpqCZvd3Ts9vdUwPzw4feuqfvPTVVdc6puiXVquKqUfpvlZTOT4Kr8DechT5QpfQj7IR/ynAfmkCVUCvwr6/jL2Ac1IOjpW0bIXp1gdugw5egMwR57y/w3mgbYlU7uAU6egySptB08P4DiHKKNYILoJOHoT4kyQAQ9RRbAzpnZxrbkEXpU2yUDTHpIxhicw2vs8CO3AUjXDT6BjpmdMpFNeE4+JvVNsSisMi7pa5yU3f4AI7kcBti0G6wIxNSV7lrDvi7A6mrCBTCakUj0WDwd+dTVxGoE7hO3kJFFu9ysCNrU1eRyOmhU9NSV+WrK3yCr9DLhlj0C9iRG/CDDeVoF2gfVdRShtRzoHMzbMiiYaDda2hpQ2wyU+vgY8i0VuzwadBurg2x6gjo5MrU1b/VBswf2oy1IVb1gPdgohthQ4Jmgh15Dj/ZEKtmg47egaQpZhW8D7Q5BQ0gStWCUEtttSFBVsmh9N8L/iZKmSdegY46QknqAE9Bmw0Q7WmLW1ozvklvpA0J6g+hwysg2s4sAJ18Bul7+HQNgneg3RIbYpR/4d9AJ10TzSFJjpgli3ZLIcqRMXKFhW2UypQsTaiGbu0sXaLsTAu4DjrpAUWm3eTP8Aa02wJ1IJusvIdCw9RVkWTyuwc6acitDUkaAB7uaXcIkg40BsKfoI1o7xFt0UbRLW4IueaYTPnDgwwTqnZXoDeo9rANrBy8Z5C4WPp/+QO0KYr6QQi5OyDT9PH41TUVHN4EYQ25iZsPoSrwaPYJeM+qegoUZXScGmH6/A6ZyhTX0irQTsxLJs/WUFZGxO0QbA9CRyi4nD6PwJd6zJrtcM9KeQ84muVJW7cSPtfA4a614KNjKRMOvs9AvjZaTeFXCKPj9sIIV1B5AH4ZfOFN6Av50hh4CD7bIFPwzji/T4IvdCGPh3zJk//94LMX2VBo1YV14AsNr77UrXE+NA98ruVP0eTi/Ay+2Mhjuf9/5PY6BJWifwEYAuHl5oXJ8F8ijznqBPgcw3ylqBmk5wWzdk/IVXY8RC4jo5GsUuXhX8jaX2A9tIVsshPhSNbEG82ncaPaMgh7Fj8uWXM5BctOOU86N4N2ljYWodHJPOB0CcFAXEuW/AthKoT67CVY4kctI5FF4zUIHUrHyjmfibUosjCcCIvBD7PmjIp83qhWtfKrkpLvQWkC5sBXTF0AAAAASUVORK5CYII=">
-                        <p>(021)-432-2312</p>
-                    </div>
-                    <div>
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARUSURBVGhD7ZlZyFVVFMdvs42YNlERCYVCKg0godWLWtRDWRFSgZqKQ1BoZmA9NJEQRCrYRINR9tJI4lCCDWKFJRbZQ0lEYPNgROVQav1+u7PgcL3f571HbZ/g/uHHd9a6++xvnbPndRpdddVVFp0Bs2EZfAHb4W94FP4XOgdWwC4w8Gb0D4Ha6gC4Df4CA/4TlsAEGAEnwwLwt83wOkyFQ6FWmg/xxp+E/tCsE+Bj2AnRQp/AAKiFbgCDchxcrmMPOhhGwXrwvo1wFGRVP/gZDGi6jg50BNgi3nufjpyaBQbyXrI613ng/d9D1vHyGhjIlcmqprVgHZclK5N8kwZxXLKqaS5Yx5xkZVAfMIDvklVdTtHW42yXTQbgurA3ug6s5+lkZdJPYBCHJKuaJoN1LExWJrl6G8TFyaqmh8E6ZiYrk24Gg3goWZ3LhTBadaCOXLJfG0TVXe0giA3mBTpyKbbnpySrmuaBddyZrEzaCm4Cj05WNd0DPsgdycqkN8Egrk9WNb0B1tHOhnO/6WowCM8fk3R0IHfBy8H7f4CsO2APVDeCwbytowONBO/zKHyRjtzyzf4Gjpe+OtrUg+CD3J6smugFMCgTDu3oSHBr4z1n6aiLopv8Aqfq2IPuBsu/laya6WUwuHeT1bOGg5OD0/YwHXWTuSwf5Ktk9azYJD6brBrKvZIBfpasnjUWLPdcsmqoOCB9mKye5ZHWco6Pw3XURSYNngGDk3XQmy6EKGvrnQ7ZdRDE6hzsgGngYtksk3RLoVz+GxgM2WS3iEPRJnCQlwPcALeAybhLwWyk03O5TOTEvP8/bxmDcqr9AwzCFhgKjxX2Kvi6uG7FSogHciq2vNdOxx+BybrTYL/pfPgAIqDYlnjt2xxTXLub9Qxvrsv1IsqvBg9SZxa22ZcD4a7CjrrEl/MUHA/7TPZ1V+LItH8K48CU50uFz7XBbccWMAhTqepFiODiXH8raD+erEbjHdC+BM4Gj83Wo8+uZw/YazmYF4GV+nY9/LhJVGbcnULLQcVAHp+sf88Y2o4f375aA/r8TZ8Prn0ThGzhyGL6e6dHhN0Unwt+h9E6Crm3inFg8sApVcWq7RhSBqe9DTxvnAiOBd94rCGxC5ZXIbKWPuQDoN+HqXzwikOTldjsIY+10fdtET/ihE6CCNTAy1OtY8hp2etXoCyDjAmgOVH3COj/Fay/Ix0GX4IVOD6aFWvH+2DZsuLoOhGir4vdL2aoa6EsMygmMsyoXKWjJOuPzw/RhdtWbDec35sDVcfC52CZ5pytn9T0Oyv5N/gRbF2nbSeGkBmYb8Ey9+tooSvA3+2ix+hoV/HGe8tsuHbEWmLwIft4zHCteB5Cbm/c9uv3u6KTSys5XnypljNX3Lbic4G5pmt6wR2s5ewWUwqf+DlNfyvcDUS5xYXP+x0/4W+FH5Msey+0JZ++/I/rxhPQtmaAXaBu2ILnQlddddWRGo1/AEE6oUFhhvGdAAAAAElFTkSuQmCC">
-                        <p>مدیر سایت : اقی فلانی</p>
-                    </div>
-                    <div>
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMVSURBVGhD7dhZyExhHMfx175kd2HJeoVEyI3kRghFiFyIZEkiF26IkkTcouzKciPJna0sWa4UEuECZXdhX7Iv36/Oo3nfmXfeMzO8M+ft/OrTzJw5c875nzn/5zkzVWnSpEmTuHRsAFqj6lcDsA1/X7xKoI/IKiSJWYyGW8gQXyQs25FVyDuMd0EC0gx7EY69WiH6hvmo5LTFKWQed7VC1uBn9Hw9GqHS0gPX4TE+wc7oeVazz8EX+PoAmqNSMhiP4LHdQC/kHbVG4zVcdgYdUO6Mgz3sMZ1Ge5g6h9+BeACX34TVlyvz8BUeyz5kXiWx5pFuuALf83ocivqMPboO7t/eXRsty0zsCbENjsH336O+hmfP+n64X7+NuciV2IWYJtgB13F4Xoj/GXvS3nR/bzAGtaWgQkJW4H8Pz/aiPek+HmIQ8qWoQsxMfIbrH8S/HJ6H4Snc9jV0R10puhAzCi/hZ87CHzalZiLsQbd5As7ecVJSIaYf7sHPeSn0RrFZhO9wW7vQFHFTciFmKsJnn2E4Cok9tglhG/fRDoWk5EKWIExSz6PHD5iMOGmBQ/BzbudF9Pw2+iNuii6kJcL47gi2ETb8lmiZl8hS5EsnXIDrO7yORU9cjpa9xTTESVGF9EGY6b3vqbmz5fgB398Ki64Zb33uwHW8BcocXl1/D3zPk7QBzmH5UnAhTkqZX/8A5Mp0fILr3cUqTMIs7EYYuj0htQ2vNn9Y7yQ6o7bELsSGXIkwqhxFXQ3pWXYeCNvN5J3BZuT6tjIzAo/hZxwEavsZHqsQ77OOwPcsxLMbdzZ3vQnwEnNe8ASsRiHDdBech/v3b5/ZqJk6C3GeuAWXe0n5e6Ac8be532A4Rp+7LCRvIQ6hjhwuu4q+KHfssfBn3EV0hclZSGN4MxhuDB1mW6FSYp/YLx6b/WMf5SzkePToBOWEV4lxDrLnPE7/WzgXPa9WiLz7HIlKjnOLc0y4crIKuQR/3iYlUxB6uVohmaNBUrIMWYUkMTmbfUYCeduTVUiS/SnkcAOwAGnSpEmTpr5TVfUbAqL8lmkSLPwAAAAASUVORK5CYII=">
-                        <p>erfankaboli.ce@gmail.com</p>
-                    </div>
-                </div>
-                <div style="width: 80%;margin: auto;">
-                    <hr style="border-color: #2e2d2d6c">
-                </div>
-                <div class="footer--copyright--container">
-                    <P>
-                        <strong>::copyright::</strong>
-                    </P>
-                    <p>All Rights Reserved for
-                        <a href="#"> beam.co</a>
-                    </p>
-                </div>
-            </div>
-            <!--/footer-->
-            <!--/section 6-->
+        <div class="navbar--search">
+            <button name="search" id="btn--search" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+            <input name="search" id="search" type="search" class="input-search" placeholder=" جسنجو ">
         </div>
-    </div>
-    <div class="desktop--version">
-        <!--navbar-->
-
-        <nav class="navbar">
-            <div class="navbar--menu">
-                <ul>
-                    <li>
-                        <a href="index.html"><i class="fa fa-home"></i></a>
-                    </li>
-                    <li>
-                        <a href="news_d_page.html">اخبار</a>
-                    </li>
-                    <li>
-                        <a href="">آخرین قوانین</a>
-                    </li>
-                    <li>
-                        <a href="">فرصت های سرمایه گذاری</a>
-                    </li>
-                    <li>
-                        <a href="">گالری</a>
-                    </li>
-                    <li class="drop-down">
-                        <a href="">مشاوره</a>
-                        <ul class="drop-down-item">
-                            <li><a href="#">مشاوره مهاجرتی</a></li>
-                            <li><a href="#">مشاوره تحصیلی</a></li>
-                            <li><a href="#">مشاوره سرمایه گذاری</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="">درباره ما</a>
-                    </li>
-                    <li>
-                        <a href="">ارتباط با ما</a>
-                    </li>
+    </nav>
+    <div class="m-navbar--menu">
+        <ul>
+            <li>
+                <a href="index.html"><i class="fa fa-home"></i></a>
+            </li>
+            <li>
+                <a href="news_d_page.html">اخبار</a>
+            </li>
+            <li>
+                <a href="last_rules.html">آخرین قوانین</a>
+            </li>
+            <li>
+                <a href="investment opportunities.html">فرصت های سرمایه گذاری</a>
+            </li>
+            <li>
+                <a href="gallery.html">گالری</a>
+            </li>
+            <li class="m-drop-down">
+                <a> مشاوره <i class="fa fa-sort-down"></i></a>
+                <ul class="m-drop-down-item">
+                    <li><a href="Immigration advice.html">مشاوره مهاجرتی</a></li>
+                    <li><a href="Academic advice.html">مشاوره تحصیلی</a></li>
+                    <li><a href="Investment Advice.html">مشاوره سرمایه گذاری</a></li>
                 </ul>
+            </li>
+            <li>
+                <a href="about_us.html">درباره ما</a>
+            </li>
+            <li>
+                <a href="contact_us.html">ارتباط با ما</a>
+            </li>
+        </ul>
+    </div>
+    <div class="overlay"> </div>
+
+    <!--navbar end-->
+
+    <!-- main content -->
+    <div class="main--content">
+        <div class="intro">
+            <div class="intro--caption--container">
+                <h1 class="intro--h1">تمامی خدمات روزگار رفتار کسی میباشد.</h1>
+                <h4 class="intro--h4">از آنجایی که طراحان عموما نویسنده متن نیستند و وظیفه رعایت حق تکثیر متون را ندارند</h4>
             </div>
-            <div class="navbar--search">
-                <button name="search" id="btn--search" type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
-                <input name="search" id="search" type="search" class="input-search" placeholder=" جسنجو ">
-            </div>
-        </nav>
-        <div class="overlay"> </div>
-
-        <!--navbar end-->
-
-        <!-- main content -->
-        <div class="main--content">
-            <div class="intro">
-                <div class="intro--caption--container">
-                    <h1 class="intro--h1">تمامی خدمات روزگار رفتار کسی میباشد.</h1>
-                    <h4 class="intro--h4">از آنجایی که طراحان عموما نویسنده متن نیستند و وظیفه رعایت حق تکثیر متون را ندارند</h4>
-                </div>
-                <div class="abs-col social">
-                    <i class="fas fa-share-alt"></i>
-                    <div class="abs-col social-icon">
-                        <div>
-                            <a href="#">
-                                <i class="fa fa-facebook-f" style="color:#3b5999"></i>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <i class="fa fa-google" style="color: #af0606"></i>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <i class="fa fa-pinterest-p" style="color: #bd081c"></i>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <i class="fa fa-twitter" style="color: #55acee"></i>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <i class="fa fa-whatsapp" style="color: #25D366"></i>
-                            </a>
-                        </div>
+            <div class="flex-col comp-social social">
+                <i class="fas fa-share-alt"></i>
+                <div class="flex-col flex-c social-icon comp-social">
+                    <div>
+                        <a href="#">
+                            <i class="fa fa-facebook-f"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <i class="fa fa-google"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <i class="fa fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <i class="fa fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <article>
-                <div style="text-align: center;padding: 50px 0px;">
-                    <h1 class="caption-underline">با ما بهترین هارو تجربه کنید</h1>
+        </div>
+        <article>
+            <section class="flex-col flex-wrap col-xl-2 sec-book">
+                <div class="col-xl-2 flex-row flex-wrap flex-j-b sec-book first">
+                    <div class="col-md-1 m-col-xl-2 xl-pad anim-book-txt">
+                        <div class="inner">
+                            <h3>سرمایه گذاری پربازده و مطمئن</h3>
+                            <p class="txt-justify">همان‌طور که اشاره شد، پیشرفت شهر ازمیر از سمت منطقه‌ای است که مجتمع مسکونی تریاندا در آن واقع شده است. بنابراین، طبیعی است که قیمت‌های خانه و زمین این منطقه افزایش چشمگیری خواهد داشت. شما با خرید یکی از واحدهای مجتمع مسکونی
+                                تریاندا علاوه بر خرید ملکی ارزنده، می‌توانید سرمایه گذاری پربازده و مطمئنی نیز داشته باشید. طبیعی است خانه‌ای که شرایط ایده‌آلی داشته باشد، در آینده نیز بهتر فروش خواهد رفت. به علاوه این که شما با خرید از مجتمع مسکونی تریاندا
+                                از عرصه و اعیان آن سهم خواهید داشت و این موضوع در پروژه‌های انگشت شماری اتفاق می‌افتد</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 m-col-xl-2 xl-pad anim-book-img"><img src="content/images/turkey5.jpg" alt="turkey"></div>
                 </div>
-                <section class="sec-1">
-                    <div class="cross-line"></div>
-                    <div class="about--line">
-                        <br>
-                        <div class="about--container right">
-                            <div class="about--content">
-                                <h1>سرمایه گذاری پربازده و مطمئن</h1>
-                                <p>همان‌طور که اشاره شد، پیشرفت شهر ازمیر از سمت منطقه‌ای است که مجتمع مسکونی تریاندا در آن واقع شده است. بنابراین، طبیعی است که قیمت‌های خانه و زمین این منطقه افزایش چشمگیری خواهد داشت. شما با خرید یکی از واحدهای مجتمع مسکونی
-                                    تریاندا علاوه بر خرید ملکی ارزنده، می‌توانید سرمایه گذاری پربازده و مطمئنی نیز داشته باشید. طبیعی است خانه‌ای که شرایط ایده‌آلی داشته باشد، در آینده نیز بهتر فروش خواهد رفت. به علاوه این که شما با خرید از مجتمع مسکونی
-                                    تریاندا از عرصه و اعیان آن سهم خواهید داشت و این موضوع در پروژه‌های انگشت شماری اتفاق می‌افتد.</p>
-                            </div>
-                        </div>
-                        <div class="about--container left">
-                            <img src="content/images/turkey25.jpg">
-                        </div>
-                        <div class="about--container right">
-                            <div class="about--content">
-                                <h1>طبیعت چشم‌نواز</h1>
-                                <p>کافی است تا پرده را کنار بزنید و از پنجره خانه‌تان به بیرون نگاهی بیندازید. صرف نظر از فضای سبز مجتمع، تا چشم کار می‌کند جنگل و درختان زیتون است. آسمان آبی و پاک نیز زیبایی این چشم‌انداز را دوچندان می‌کند. بسیار کم پیش
-                                    می‌آید که در چنین طبیعتی، کاملا اصولی امکانات مدرن نیز وجود داشته باشد. . برای مثال، در حالی که در دل این طبیعت زیبا زندگی می‌کنید، تا دومین بیمارستان بزرگ شهر، ایستگاه مترو و فرودگاه تنها 10 دقیقه فاصله دارید. این
-                                    دقیقا همان زندگی رویایی‌ای است که مجتمع مسکونی تریاندا به شما وعده می‌دهد.</p>
-                            </div>
-                        </div>
-                        <div class="about--container left">
-                            <img src="content/images/turkey4.jpg">
-                        </div>
-                        <div class="about--container right">
-                            <div class="about--content">
-                                <h1>محیط گرم و صمیمی</h1>
-                                <p>طبیعی است که شما با خرید واحدی در مجتمع مسکونی تریاندا در جایی اقامت خواهید داشت که همسایگانی غیر ایرانی دارید. این موضوع ممکن است شما را نگران کند؛ چرا که برقراری ارتباط با فردی که همزبان شما نیستند سخت به نظر می‌رسد.
-                                    اما نگران نباشید. نخستین چیزی که باید بدانید این است که مردم ترکیه بسیار مهمان نواز، گرم و صمیمی هستند. آن‌ها نه تنها به شما دید بدی ندارند، بلکه مشتاق به ارتباط با شما هستند. این را با یک بار مسافرت به ترکیه قطعا حس
-                                    خواهید کرد. فراموش نکنید شما با خرید خانه از دولت ترکیه، یک سرمایه‌گذار خارجی محسوب می‌شوید. بنابراین دیدگاه عموم مردم به شما مثبت و همراه با احترام خواهد بود. از طرفی، شما تنها خارجی ساکن مجتمع مسکونی تریاندا نیستید.
-                                    ساکنین این مجتمع از ملیت‌های گوناگون و عموما اروپایی هستند. شما در کوچه پس کوچه‌های مرکز شهر زندگی نمی‌کنید که مدام با مردم محلی در ارتباط باشید. محل زندگی شما مانند یک هتل بین‌المللی است که طبیعتا از نقاط مختلف مسافر
-                                    دارد. بنابراین، در مجتمع مسکونی تریاندا محیطی گرم و صمیمی را تجربه خواهید کرد. بد نیست بدانید در مراسم‌های مختلف ساکنین در کافی‌شاپ مجتمع جمع شده، لحظات شاد و مفرحی را در کنار هم می‌گذرانند. برای مثال، در شب سال نوی
-                                    2018 برنامه‌های متنوعی در کافی‌شاپ اجرا شد و همسایگان ضمن آشنایی با یک‌دیگر، اوقات خوشی را سپری کردند.</p>
+                <div class="col-xl-2 flex-row flex-wrap flex-c xxxl-pad m-md-pad anim-op second">
+                    <div>
+                        <h3>
+                            محیط گرم و صمیمی
+                        </h3>
+                        <p class="txt-justify">
+                            طبیعی است که شما با خرید واحدی در مجتمع مسکونی تریاندا در جایی اقامت خواهید داشت که همسایگانی غیر ایرانی دارید. این موضوع ممکن است شما را نگران کند؛ چرا که برقراری ارتباط با فردی که همزبان شما نیستند سخت به نظر می‌رسد. اما نگران نباشید. نخستین چیزی که
+                            باید بدانید این است که مردم ترکیه بسیار مهمان نواز، گرم و صمیمی هستند. آن‌ها نه تنها به شما دید بدی ندارند، بلکه مشتاق به ارتباط با شما هستند. این را با یک بار مسافرت به ترکیه قطعا حس خواهید کرد. فراموش نکنید شما با خرید خانه
+                            از دولت ترکیه، یک سرمایه‌گذار خارجی محسوب می‌شوید. بنابراین دیدگاه عموم مردم به شما مثبت و همراه با احترام خواهد بود. از طرفی، شما تنها خارجی ساکن مجتمع مسکونی تریاندا نیستید. ساکنین این مجتمع از ملیت‌های گوناگون و عموما اروپایی
+                            هستند. شما در کوچه پس کوچه‌های مرکز شهر زندگی نمی‌کنید که مدام با مردم محلی در ارتباط باشید. محل زندگی شما مانند یک هتل بین‌المللی است که طبیعتا از نقاط مختلف مسافر دارد. بنابراین، در مجتمع مسکونی تریاندا محیطی گرم و صمیمی
+                            را تجربه خواهید کرد. بد نیست بدانید در مراسم‌های مختلف ساکنین در کافی‌شاپ مجتمع جمع شده، لحظات شاد و مفرحی را در کنار هم می‌گذرانند. برای مثال، در شب سال نوی 2018 برنامه‌های متنوعی در کافی‌شاپ اجرا شد و همسایگان ضمن آشنایی
+                            با یک‌دیگر، اوقات خوشی را سپری کردند</p>
+                    </div>
 
-                            </div>
-                        </div>
-
-                        <div class="about--container left">
-                            <div class="about--content">
-                                <h1>آسایش همه جانبه</h1>
-                                <p>هر آن چه که تا به حال گفتیم درباره فضای بیرونی مجتمع و محل قرارگیری آن بود؛ اما داخل واحد: فضاهای داخلی واحدهای مجتمع مسکونی تریاندا از بهترین مواد و مصالح ساخته شده است. واحدها نیمه فرنیش هستند و گرمایش آن‌ها شوفاژ و سرمایش
-                                    اسپیلت است. واحدها بسیار خوش نقشه و آفتابگیرند و تراس و بالکن‌ها فضای وسیعی دارند. به علاوه این که کل مجتمع دارای بیمه نامه زلزله می باشد. در مجموع، مجتمع مسکونی تریاندا تمام انتظارات شما را از یک مجتمع استاندارد و
-                                    ایده‌آل برآورده خواهد کرد.</p>
-                            </div>
-                        </div>
-                        <div class="about--container right">
-                            <img src="content/images/turkey12.jpg">
-                            <br>
-                            <br>
-                        </div>
-                    </div>
-                </section>
-                <section class="sec-2">
-                    <div class="flex-card first">
-                        <div class="top">
-                            <h1>واحد های ۳ خوابه</h1>
-                            <p>شروع قیمت از</p>
-                        </div>
-                        <div class="middle">
-                            <div class="price b-blue">
-                                <p>490,000</p>
-                            </div>
-                        </div>
-                        <div class="bottom">
-                            <p>۱۳۵ متر زیر بنا</p>
-                            <p>تحویل به صورت نیمه مبله</p>
-                            <p>کف پارکت ، شیرآلات ، کابینت ، کمد ، هود ،گاز ،فر،</p>
-                            <p>۲عدد کولر گازی و درب ضد سرقت آلمانی</p>
-                            <p>تحویل کلید و انتقال سند قطعی با با پرداخت ۵۰ درصد</p>
-                            <p>انتقال سند در عرض ۲ روز کاری</p>
-                            <p class="gold">امکان اقساط بندی تا ۵ سال</p>
-                        </div>
-                    </div>
-                    <div class="flex-card second">
-                        <div class="top">
-                            <h1>واحد های ۳ خوابه</h1>
-                            <p>شروع قیمت از</p>
-                        </div>
-                        <div class="middle">
-                            <div class="price b-red">
-                                <p>490,000</p>
-                            </div>
-                        </div>
-                        <div class="bottom">
-                            <p>۱۳۵ متر زیر بنا</p>
-                            <p>تحویل به صورت نیمه مبله</p>
-                            <p>کف پارکت ، شیرآلات ، کابینت ، کمد ، هود ،گاز ،فر،</p>
-                            <p>۲عدد کولر گازی و درب ضد سرقت آلمانی</p>
-                            <p>تحویل کلید و انتقال سند قطعی با با پرداخت ۵۰ درصد</p>
-                            <p>انتقال سند در عرض ۲ روز کاری</p>
-                            <p class="gold">امکان اقساط بندی تا ۵ سال</p>
-                        </div>
-                    </div>
-                </section>
-            </article>
-            <section class="sec-3 news">
-                <div class="container">
-                    <h1>آخرین اخبار</h1>
-                    <hr class="hr-lg">
                 </div>
-                <div class="container flex-row">
-                    <div class="card h-card">
-                        <img src="content/images/t1.jpg" class="card-image">
-                        <div class="container">
-                            <h2> سر متن اخبار مورد نظر خبر های داغ کره زمین این است.</h2>
-                            <span><i class="fa fa-user"></i><a href="#"> فرناز مقانی</a><i class="fa fa-calendar"></i> 1397/9/11 <i class="fa fa-clock"></i>18:24:42</span>
-                            <span style="color: black"><i class="fa fa-facebook"></i><i class="fa fa-telegram"></i><i class="fa fa-instagram"></i><i class="fa fa-google"></i></span>
-                            <hr>
-                            <p>مرکز شهر زندگی نمی‌کنید که مدام با مردم محلی در ارتباط باشید. محل زندگی شما مانند یک هتل بین‌المللی است که طبیعتا از هم می‌گذرانند. برای مثال، در شب سال نوی 2018 برنامه‌های متنوعی در کافی‌شاپ اجرا شد و
-                            </p>
-                            <a href="#">ادامه مطلب ...</a>
+                <div class="col-xl-2 flex-row flex-wrap flex-j-b third">
+                    <div class="col-sm-2 m-col-xl-2 xl-pad anim-book-img-alt"><img src="content/images/turkey26.jpg" alt="turkey"></div>
+                    <div class="col-md-1 m-col-xl-2 xl-pad anim-book-txt-alt">
+                        <div class="inner">
+                            <h3>طبیعت چشم‌نواز</h3>
+                            <p class="txt-justify">
+                                کافی است تا پرده را کنار بزنید و از پنجره خانه‌تان به بیرون نگاهی بیندازید. صرف نظر از فضای سبز مجتمع، تا چشم کار می‌کند جنگل و درختان زیتون است. آسمان آبی و پاک نیز زیبایی این چشم‌انداز را دوچندان می‌کند. بسیار کم پیش می‌آید که در چنین طبیعتی، کاملا
+                                اصولی امکانات مدرن نیز وجود داشته باشد. . برای مثال، در حالی که در دل این طبیعت زیبا زندگی می‌کنید، تا دومین بیمارستان بزرگ شهر، ایستگاه مترو و فرودگاه تنها 10 دقیقه فاصله دارید. این دقیقا همان زندگی رویایی‌ای است که مجتمع
+                                مسکونی تریاندا به شما وعده می‌دهد</p>
                         </div>
                     </div>
-                    <div class="card h-card">
-                        <img src="content/images/t1.jpg" class="card-image">
-                        <div class="container">
-                            <h2>سر متن اخبار مورد نظر</h2>
-                            <hr>
-                            <p>مرکز شهر زندگی نمی‌کنید که مدام با مردم محلی در ارتباط باشید. محل زندگی شما مانند یک هتل بین‌المللی است که طبیعتا از هم می‌گذرانند. برای مثال، در شب سال نوی 2018 برنامه‌های متنوعی در کافی‌شاپ اجرا شد و
-                            </p>
-                            <a href="#">ادامه مطلب ...</a>
+                </div>
+                <div class="col-xl-2 flex-row flex-wrap flex-j-b forth">
+                    <div class="col-md-1 m-col-xl-2 xl-pad anim-book-txt">
+                        <div class="inner">
+                            <h3>آسایش همه جانبه</h3>
+                            <p class="txt-justify">
+                                هر آن چه که تا به حال گفتیم درباره فضای بیرونی مجتمع و محل قرارگیری آن بود؛ اما داخل واحد: فضاهای داخلی واحدهای مجتمع مسکونی تریاندا از بهترین مواد و مصالح ساخته شده است. واحدها نیمه فرنیش هستند و گرمایش آن‌ها شوفاژ و سرمایش اسپیلت است. واحدها بسیار خوش
+                                نقشه و آفتابگیرند و تراس و بالکن‌ها فضای وسیعی دارند. به علاوه این که کل مجتمع دارای بیمه نامه زلزله می باشد. در مجموع، مجتمع مسکونی تریاندا تمام انتظارات شما را از یک مجتمع استاندارد و ایده‌آل برآورده خواهد کرد</p>
                         </div>
                     </div>
-                    <div class="card h-card">
-                        <img src="content/images/t1.jpg" class="card-image">
-                        <div class="container">
-                            <h2>سر متن اخبار مورد نظر</h2>
-                            <hr>
-                            <p>مرکز شهر زندگی نمی‌کنید که مدام با مردم محلی در ارتباط باشید. محل زندگی شما مانند یک هتل بین‌المللی است که طبیعتا از هم می‌گذرانند. برای مثال، در شب سال نوی 2018 برنامه‌های متنوعی در کافی‌شاپ اجرا شد و
-                            </p>
-                            <a href="#">ادامه مطلب ...</a>
-                        </div>
-                    </div>
-                    <div class="card h-card">
-                        <img src="content/images/t1.jpg" class="card-image">
-                        <div class="container">
-                            <h2>سر متن اخبار مورد نظر</h2>
-                            <hr>
-                            <p>مرکز شهر زندگی نمی‌کنید که مدام با مردم محلی در ارتباط باشید. محل زندگی شما مانند یک هتل بین‌المللی است که طبیعتا از هم می‌گذرانند. برای مثال، در شب سال نوی 2018 برنامه‌های متنوعی در کافی‌شاپ اجرا شد و
-                            </p>
-                            <a href="#">ادامه مطلب ...</a>
-                        </div>
-                    </div>
-                    <div class="card h-card">
-                        <img src="content/images/t1.jpg" class="card-image">
-                        <div class="container">
-                            <h2>سر متن اخبار مورد نظر</h2>
+                    <div class="col-sm-2 m-col-xl-2 xl-pad anim-book-img"><img src="content/images/turkey6.jpg" alt="turkey"></div>
+                </div>
+            </section>
 
-                            <hr>
-                            <p>مرکز شهر زندگی نمی‌کنید که مدام با مردم محلی در ارتباط باشید. محل زندگی شما مانند یک هتل بین‌المللی است که طبیعتا از هم می‌گذرانند. برای مثال، در شب سال نوی 2018 برنامه‌های متنوعی در کافی‌شاپ اجرا شد و
-                            </p>
-                            <a href="#">ادامه مطلب ...</a>
+
+            <!--sec 2-->
+            <section class="sec-2 flex-row flex-wrap flex-c m-flex-col">
+                <div class="flex-card flex-col fit-content txt-center m-col-xl-2  first">
+                    <div class="top">
+                        <h1>واحد های ۳ خوابه</h1>
+                        <p class="txt-center">شروع قیمت از</p>
+                    </div>
+                    <div class="middle">
+                        <div class="price b-blue">
+                            <p>490,000</p>
                         </div>
+                    </div>
+                    <div class="bottom">
+                        <p class="txt-center">۱۳۵ متر زیر بنا</p>
+                        <p class="txt-center">تحویل به صورت نیمه مبله</p>
+                        <p class="txt-center">کف پارکت ، شیرآلات ، کابینت ، کمد ، هود ،گاز ،فر،</p>
+                        <p class="txt-center">۲عدد کولر گازی و درب ضد سرقت آلمانی</p>
+                        <p class="txt-center">تحویل کلید و انتقال سند قطعی با با پرداخت ۵۰ درصد</p>
+                        <p class="txt-center">انتقال سند در عرض ۲ روز کاری</p>
+                        <p class="gold txt-center">امکان اقساط بندی تا ۵ سال</p>
+                    </div>
+                </div>
+                <div class="flex-card flex-col fit-content txt-center m-col-xl-2 second">
+                    <div class="top">
+                        <h1>واحد های ۳ خوابه</h1>
+                        <p class="txt-center">شروع قیمت از</p>
+                    </div>
+                    <div class="middle">
+                        <div class="price b-red">
+                            <p>490,000</p>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <p class="txt-center">۱۳۵ متر زیر بنا</p>
+                        <p class="txt-center">تحویل به صورت نیمه مبله</p>
+                        <p class="txt-center">کف پارکت ، شیرآلات ، کابینت ، کمد ، هود ،گاز ،فر،</p>
+                        <p class="txt-center">۲عدد کولر گازی و درب ضد سرقت آلمانی</p>
+                        <p class="txt-center">تحویل کلید و انتقال سند قطعی با با پرداخت ۵۰ درصد</p>
+                        <p class="txt-center">انتقال سند در عرض ۲ روز کاری</p>
+                        <p class="gold txt-center">امکان اقساط بندی تا ۵ سال</p>
                     </div>
                 </div>
             </section>
-        </div>
-        <div class="contact--us--form">
-            <span class="email-icon">
-                <i class="far fa-envelope fa-lg"></i>
-            </span>
-            <div>
-                <form method="POST" action="http://formspree.io/erfankaboli.ce@gmail.com" class="c-u-form">
-                    <input type="text" name="Name" class="c-u-input sm" aria-label="Name" title="Name" placeholder="نام شما">
-                    <input type="text" name="Email" class="c-u-input sm" aria-label="Email" title="Email" placeholder="ایمیل">
-                    <textarea name="Message" rows="8" cols="0" class="c-u-input lg" aria-label="Message" placeholder="پیام شما ..."></textarea>
-                    <input type="submit" name="submit" value="ارسال" id="c-u-submit" class="button-c-u">
-                </form>
-                <!-- end of form -->
-            </div>
-        </div>
-        <!-- / main content -->
+            <!--sec 2 end-->
+        </article>
+        <div class="flex-col col-xl-2 flex-wrap flex-c auto-height">
+            <div class="flex-col flex-c col-xl-2 auto-height">
 
-        <!--footer-->
+                <div class="pos-rel col-xl-2 txt-center h-center">
+                    <h2 class="i-caption"><b>آخرین اخبار</b></h2>
+                </div>
 
-        <footer class="footer">
-            <div class="flex-row m-flex-col s-b">
-                <div class="footer--contact-us col-sm-1 m-col-xl-2">
-                    <h4>آدرس دفتر</h4>
-                    <hr>
-                    <ul>
-                        <li>
-                            <address>
-                                <i class="fas fa-map-marker-alt"></i> تهران . خیابان جمهوری . پلاک فلان </address>
-                        </li>
-                        <li>
-
-                            <h4>
-                                <i class="fas fa-phone"></i>شماهر تماس: (021) 5432-4567 </h4>
-                        </li>
-                        <li>
-
-                            <h4>
-                                <i class="far fa-envelope"></i> ایمیل : erfankaboli.ce@gmail.com </h4>
-                        </li>
-                    </ul>
-                    <div class="follow-us">
-                        <h4>ما را در شبکه های اجتماعی دنبال کنید</h4>
-                        <ul>
-                            <li>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-telegram"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-google"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
+                <div class="flex-row flex-j-b flex-wrap col-xl-2 xxl-pad">
+                    <div class="i-card col-sm-1 m-col-xl-2 auto-height">
+                        <div class="col-xl-2 auto-height pos-rel">
+                            <img src="content/images/turkey1.jpg">
+                            <div class="col-xl-2 pos-abs i-card-info flex-col flex-c">
+                                <div class="sm-pad"><i class="fa fa-user"><a href="#"> فرناز مقانی </a></i></div>
+                                <div class="sm-pad"><i class="fa fa-clock-o"> 23:01:36 </i></div>
+                                <div class="sm-pad"><i class="fa fa-calender"> 1397/6/3 </i></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>تیتر خبر اینجا قرار میگیرد</h3>
+                        </div>
+                    </div>
+                    <div class="i-card col-sm-1 m-col-xl-2 auto-height">
+                        <div class="col-xl-2 auto-height pos-rel">
+                            <img src="content/images/turkey9.jpg">
+                            <div class="col-xl-2 pos-abs i-card-info flex-col flex-c">
+                                <div class="sm-pad"><i class="fa fa-user"><a href="#"> فرناز مقانی </a></i></div>
+                                <div class="sm-pad"><i class="fa fa-clock-o"> 23:01:36 </i></div>
+                                <div class="sm-pad"><i class="fa fa-calender"> 1397/6/3 </i></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>تیتر خبر اینجا قرار میگیرد</h3>
+                        </div>
+                    </div>
+                    <div class="i-card col-sm-1 m-col-xl-2 auto-height">
+                        <div class="col-xl-2 auto-height pos-rel">
+                            <img src="content/images/turkey26.jpg">
+                            <div class="col-xl-2 pos-abs i-card-info flex-col flex-c">
+                                <div class="sm-pad"><i class="fa fa-user"><a href="#"> فرناز مقانی </a></i></div>
+                                <div class="sm-pad"><i class="fa fa-clock-o"> 23:01:36 </i></div>
+                                <div class="sm-pad"><i class="fa fa-calender"> 1397/6/3 </i></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>تیتر خبر اینجا قرار میگیرد</h3>
+                        </div>
                     </div>
                 </div>
-                <div class="footer--quick-accses m-col-xl-2 col-sm-1">
-                    <h4>لینک های مفید</h4>
-                    <hr>
-                    <ul>
-                        <li>
-                            <a href="#">خبر ها</a>
-                        </li>
-                        <li>
-                            <a href="#">تماس با ما</a>
-                        </li>
-                        <li>
-                            <a href="#">دسترسی 1</a>
-                        </li>
-                        <li>
-                            <a href="#">دسترسی 2</a>
-                        </li>
-                        <li>
-                            <a href="#">دسترسی 3</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <a href="#">دسترسی 1</a>
-                        </li>
-                        <li>
-                            <a href="#">دسترسی 2</a>
-                        </li>
-                        <li>
-                            <a href="#">دسترسی 3</a>
-                        </li>
-                    </ul>
+
+
+            </div>
+        </div>
+        <div class="flex-col col-xl-2 flex-wrap flex-c auto-height">
+            <div class="flex-col flex-c col-xl-2 auto-height">
+
+                <div class="pos-rel col-xl-2 txt-center h-center">
+                    <h2 class="i-caption"><b>خبر های ترکیه</b></h2>
                 </div>
-                <div class="footer--join-us flex-row  row-sm-2 col-sm-2 m-col-xl-2">
-                    <fieldset class="col-xl-2">
-                        <legend>عضویت در خبر نامه </legend>
-                        <div class="col-xl-2 m-flex-col">
-                            <button name="button--email--submit" type="submit" id="button--email--submit">عضویت</button>
-                            <input name="email" type="email" id="email" placeholder="ایمیل خود را وارد کنید">
+
+                <div class="flex-row flex-j-b flex-wrap col-xl-2 xxl-pad">
+                    <div class="i-card rounded-b bg-white col-xs-2-1 m-col-xl-2 auto-height xs-marg">
+                        <div class="col-xl-2 auto-height pos-rel">
+                            <img src="content/images/t5.jpg">
+                            <div class="col-xl-2 pos-abs i-card-info flex-col flex-c">
+                                <div class="sm-pad"><i class="fa fa-user"><a href="#"> فرناز مقانی </a></i></div>
+                                <div class="sm-pad"><i class="fa fa-clock-o"> 23:01:36 </i></div>
+                                <div class="sm-pad"><i class="fa fa-calender"> 1397/6/3 </i></div>
+                            </div>
                         </div>
-                    </fieldset>
-                    <p><b>درباره شرکت : </b>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع
-                        با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
-                        رد استفاده قرار گیرد.
-                    </p>
+                        <div class="sm-pad i-border">
+                            <h3>تیتر خبر اینجا قرار میگیرد</h3>
+                            <p class="txt-justify">استفاده از طراحان گرافیک است. چاپگره و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
+                        </div>
+                    </div>
+                    <div class="i-card rounded-b bg-white col-xs-2-1 m-col-xl-2 auto-height xs-marg">
+                        <div class="col-xl-2 auto-height pos-rel">
+                            <img src="content/images/t1.jpg">
+                            <div class="col-xl-2 pos-abs i-card-info flex-col flex-c">
+                                <div class="sm-pad"><i class="fa fa-user"><a href="#"> فرناز مقانی </a></i></div>
+                                <div class="sm-pad"><i class="fa fa-clock-o"> 23:01:36 </i></div>
+                                <div class="sm-pad"><i class="fa fa-calender"> 1397/6/3 </i></div>
+                            </div>
+                        </div>
+                        <div class="sm-pad i-border">
+                            <h3>تیتر خبر اینجا قرار میگیرد</h3>
+                            <p class="txt-justify">استفاده از طراحان گرافیک است. چاپگره و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
+                        </div>
+                    </div>
+                    <div class="i-card rounded-b bg-white col-xs-2-1 m-col-xl-2 auto-height xs-marg">
+                        <div class="col-xl-2 auto-height pos-rel">
+                            <img src="content/images/t2.jpg">
+                            <div class="col-xl-2 pos-abs i-card-info flex-col flex-c">
+                                <div class="sm-pad"><i class="fa fa-user"><a href="#"> فرناز مقانی </a></i></div>
+                                <div class="sm-pad"><i class="fa fa-clock-o"> 23:01:36 </i></div>
+                                <div class="sm-pad"><i class="fa fa-calender"> 1397/6/3 </i></div>
+                            </div>
+                        </div>
+                        <div class="sm-pad i-border">
+                            <h3>تیتر خبر اینجا قرار میگیرد</h3>
+                            <p class="txt-justify">استفاده از طراحان گرافیک است. چاپگره و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
+                        </div>
+                    </div>
+                    <div class="i-card rounded-b bg-white col-xs-2-1 m-col-xl-2 auto-height xs-marg">
+                        <div class="col-xl-2 auto-height pos-rel">
+                            <img src="content/images/t4.jpg">
+                            <div class="col-xl-2 pos-abs i-card-info flex-col flex-c">
+                                <div class="sm-pad"><i class="fa fa-user"><a href="#"> فرناز مقانی </a></i></div>
+                                <div class="sm-pad"><i class="fa fa-clock-o"> 23:01:36 </i></div>
+                                <div class="sm-pad"><i class="fa fa-calender"> 1397/6/3 </i></div>
+                            </div>
+                        </div>
+                        <div class="sm-pad i-border">
+                            <h3>تیتر خبر اینجا قرار میگیرد</h3>
+                            <p class="txt-justify">استفاده از طراحان گرافیک است. چاپگره و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+    <!-- / main content -->
+
+    <!--footer-->
+
+
+    <!--footer end-->
+    <footer class="footer">
+        <div class="flex-row m-flex-col s-b">
+            <div class="footer--contact-us col-sm-1 m-col-xl-2">
+                <h4>آدرس دفتر</h4>
+                <hr>
+                <ul>
+                    <li>
+                        <address>
+                                <i class="fas fa-map-marker-alt"></i> تهران . خیابان جمهوری . پلاک فلان </address>
+                    </li>
+                    <li>
+
+                        <h4>
+                            <i class="fas fa-phone"></i>شماهر تماس: (021) 5432-4567 </h4>
+                    </li>
+                    <li>
+
+                        <h4>
+                            <i class="far fa-envelope"></i> ایمیل : erfankaboli.ce@gmail.com </h4>
+                    </li>
+                </ul>
+                <div class="follow-us">
+                    <h4>ما را در شبکه های اجتماعی دنبال کنید</h4>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-telegram"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-google"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <hr>
-            <div class="copy-rights">
-                <p>
-                    <strong>Copyrights</strong> :: All Rights Reserved for ::
-                    <a href="#">
-                        <svg>
+            <div class="footer--quick-accses m-col-xl-2 col-sm-1">
+                <h4>لینک های مفید</h4>
+                <hr>
+                <ul>
+                    <li>
+                        <a href="#">خبر ها</a>
+                    </li>
+                    <li>
+                        <a href="#">تماس با ما</a>
+                    </li>
+                    <li>
+                        <a href="#">دسترسی 1</a>
+                    </li>
+                    <li>
+                        <a href="#">دسترسی 2</a>
+                    </li>
+                    <li>
+                        <a href="#">دسترسی 3</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#">دسترسی 1</a>
+                    </li>
+                    <li>
+                        <a href="#">دسترسی 2</a>
+                    </li>
+                    <li>
+                        <a href="#">دسترسی 3</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer--join-us flex-row  row-sm-2 col-sm-2 m-col-xl-2">
+                <fieldset class="col-xl-2">
+                    <legend>عضویت در خبر نامه </legend>
+                    <div class="col-xl-2 m-flex-col">
+                        <button name="button--email--submit" type="submit" id="button--email--submit">عضویت</button>
+                        <input name="email" type="email" id="email" placeholder="ایمیل خود را وارد کنید">
+                    </div>
+                </fieldset>
+                <p><b>درباره شرکت : </b>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع
+                    با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
+                    رد استفاده قرار گیرد.
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="copy-rights">
+            <p>
+                <strong>Copyrights</strong> :: All Rights Reserved for ::
+                <a href="#">
+                    <svg>
                             <symbol id="s-text">
                                 <text text-anchor="middle" x="50%" y="80%">
                                     <a href="#">beam.co</a>
@@ -647,13 +482,11 @@
                                 <use xlink:href="#s-text" class="text-copy"></use>
                             </g>
                         </svg>
-                    </a>
-                </p>
-            </div>
-        </footer>
+                </a>
+            </p>
+        </div>
+    </footer>
 
-        <!--footer end-->
-    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
 </body>

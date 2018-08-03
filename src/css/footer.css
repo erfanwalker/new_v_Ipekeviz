@@ -1,11 +1,10 @@
     footer {
         background-color: #2d2d2d;
-        position: relative;
+        /* position: relative; */
         min-height: 315px;
         color: white;
         direction: rtl;
         /* padding-top: 130px; */
-        bottom: 0px;
     }
     
     footer p a {
