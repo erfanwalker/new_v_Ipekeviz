@@ -1,4 +1,28 @@
+@font-face {
+    font-family: 'B Yekan';
+    src: url('../content//fonts/BYekan-webfont.eot') format('eot'), url('../content//fonts/BYekan-webfont.woff') format('woff'), url('../content//fonts/BYekan-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'B Nazanin';
+    src: url('../content//fonts/BNazanin.woff2') format('woff2'), url('../content//fonts/BNazanin.woff') format('woff'), url('../content//fonts/BNazanin.ttf') format('truetype');
+    font-weight: 400;
+    font-stretch: normal;
+    /*font-style: normal;*/
+}
+
+@font-face {
+    font-family: 'B Nazanin';
+    src: url('../content//fonts/BNaznnBd.woff2') format('woff2'), url('../content//fonts/BNaznnBd.woff') format('woff'), url('../content//fonts/BNaznnBd.ttf') format('truetype');
+    font-weight: 700;
+    font-stretch: normal;
+    /*font-style: normal;*/
+}
+
 * {
+    font-family: 'B Yekan', 'B Nazanin', 'Tahoma';
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -13,6 +37,40 @@ body {
 ul {
     list-style: none;
     padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'B Nazanin', 'Tahoma';
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.9em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+h5 {
+    font-size: .9em;
+}
+
+h6 {
+    font-size: .7em;
 }
 
 a {
@@ -82,6 +140,11 @@ input:active {
     outline: none;
 }
 
+figcaption {
+    margin-top: -10px;
+    font-size: .83rem;
+}
+
 body>article {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -100,6 +163,15 @@ td {
 
 tr:nth-child(even) {
     background-color: #dddddd;
+}
+
+h3 a {
+    color: rgb(20, 20, 20);
+}
+
+.sticky {
+    position: sticky;
+    top: 30px;
 }
 
 .fa-facebook,
@@ -149,6 +221,20 @@ tr:nth-child(even) {
 
 .social-fa:hover i {
     transform: rotateY(360deg);
+}
+
+.fa-user,
+.fa-calendar,
+.fa-clock-o,
+.fa-tags {
+    color: rgb(139, 0, 35);
+}
+
+.fa-user a,
+.fa-calendar a,
+.fa-clock-o a,
+.fa-tags a {
+    color: rgb(180, 180, 180);
 }
 
 .float-r {
@@ -500,12 +586,42 @@ tr:nth-child(even) {
     border-top: none;
 }
 
+.i-txt {
+    border-right: 4px solid rgb(185, 0, 0);
+    color: rgb(104, 0, 0);
+    text-align: right;
+    margin: 5px;
+}
+
+.border-btm {
+    border-bottom: 1px solid #ececec;
+}
+
+.border-top {
+    border-top: 1px solid #ececec;
+}
+
+.caption-border-r {
+    border-right: 6px solid #109e6f;
+    border-radius: 0px 15px 15px 0px;
+}
+
 .rounded-b {
     border-radius: 3px;
 }
 
 .roundest-b {
     border-radius: 5px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.quote {
+    text-align: right;
+    color: rgb(170, 170, 170);
+    display: block;
 }
 
 @media only screen and (max-width: 1020px) {

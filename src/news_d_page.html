@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#28aff8">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.svg">
     <link rel="stylesheet" href="css/navbar.css">
@@ -16,14 +18,14 @@
 <body>
     <!--navbar-->
 
-    <nav class="navbar">
+    <nav class="navbar overlay-on">
         <div class=" navbar-collapse-btn"><i class="fa fa-reorder"></i></div>
         <div class="navbar--menu">
             <ul>
                 <li>
                     <a href="index.html"><i class="fa fa-home"></i></a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="news_d_page.html">اخبار</a>
                 </li>
                 <li>
@@ -58,7 +60,7 @@
             <input name="search" id="search" type="search" class="input-search" placeholder=" جسنجو ">
         </div>
     </nav>
-    <div class="m-navbar--menu">
+    <div class="m-navbar--menu overlay-on">
         <ul>
             <li>
                 <a href="index.html"><i class="fa fa-home"></i></a>
@@ -104,17 +106,13 @@
         <section class="news--page--sec-1 flex-col col-md-2 m-col-xl-2 t-col-lg-1">
             <!--tags-->
             <div class="comp-card col-xl-2 m-col-xl-2">
-                <div class="flex-row flex-wrap tag-wrapper">
-                    <span class="tag"><a href="#">اخبار</a></span>
-                    <span class="tag"><a href="#">تگ 1</a></span>
-                    <span class="tag"><a href="#">تگ 2</a></span>
-                    <span class="tag"><a href="#">تگ 3</a></span>
-                </div>
+                <input class="sm-pad col-lg-1" name="search" placeholder="کلمه مورد نظر خود را وارد کنید" type="search"><i class="fa fa-search float-r sm-pad"><a href="#" type="submit" class="c-black sm-pad">جستجو</a></i></input>
             </div>
             <!--tags end-->
             <!--///////-->
             <!--main content-->
             <section class="comp-card col-xl-2 m-col-xl-2">
+                <h1 class="caption-border-b"> اخبار </h1>
                 <article class="comp-news-card flex-col col-xl-2 flex-wrap">
                     <div class="news-card-header card-header flex-col col-xl-2">
                         <h1>وزیر امروز یک نشت خبری در تزکیه داشت</h1>
@@ -157,7 +155,7 @@
                             <span class="tag"><a href="#">قلعه</a></span>
                         </div>
                         <div class="continue-btn btn">
-                            <a href="#">ادامه مطلب</a>
+                            <a href="single_news.html">ادامه مطلب</a>
                         </div>
                     </div>
                 </article>
@@ -203,7 +201,7 @@
                             <span class="tag"><a href="#">قلعه</a></span>
                         </div>
                         <div class="continue-btn btn">
-                            <a href="#">ادامه مطلب</a>
+                            <a href="single_news.html">ادامه مطلب</a>
                         </div>
                     </div>
                 </article>
@@ -249,7 +247,7 @@
                             <span class="tag"><a href="#">قلعه</a></span>
                         </div>
                         <div class="continue-btn btn">
-                            <a href="#">ادامه مطلب</a>
+                            <a href="single_news.html">ادامه مطلب</a>
                         </div>
                     </div>
                 </article>
@@ -295,7 +293,7 @@
                             <span class="tag"><a href="#">قلعه</a></span>
                         </div>
                         <div class="continue-btn btn">
-                            <a href="#">ادامه مطلب</a>
+                            <a href="single_news.html">ادامه مطلب</a>
                         </div>
                     </div>
                 </article>
@@ -341,7 +339,7 @@
                             <span class="tag"><a href="#">قلعه</a></span> <span class="tag"><a href="#">قلعه</a></span>
                         </div>
                         <div class="continue-btn btn">
-                            <a href="#">ادامه مطلب</a>
+                            <a href="single_news.html">ادامه مطلب</a>
                         </div>
                     </div>
                 </article>
@@ -387,7 +385,7 @@
                             <span class="tag"><a href="#">قلعه</a></span>
                         </div>
                         <div class="continue-btn btn">
-                            <a href="#">ادامه مطلب</a>
+                            <a href="single_news.html">ادامه مطلب</a>
                         </div>
                     </div>
                 </article>
@@ -410,68 +408,58 @@
         <section class="side-bar col-xs-2 t-col-sm-1">
 
             <div class="comp-card">
-                <h1>اخرین اخبار</h1>
+                <h3>اخرین اخبار</h3>
                 <div class="flex-col col-xl-2">
                     <div class="col-xl-2">
                         <img src="content/images/t4.jpg" alt="turkey">
                     </div>
-                    <h3>تیتر اخبار از این قرار است که</h3>
+                    <h4>تیتر اخبار از این قرار است که</h4>
                     <p>حالال اینجا یه متن تقریبا دو خطی قرار میگیره تا جلوه سایت زیبا بماند</p>
                     <br>
-                    <div class="btn continue-btn"><a>ادامه مطلب</a></div>
+                    <div class="btn continue-btn"><a href="single_news.html">ادامه مطلب</a></div>
                     <hr class="col-xl-2">
                 </div>
                 <div class="flex-col col-xl-2">
                     <div class="col-xl-2">
                         <img src="content/images/t5.jpg" alt="turkey">
                     </div>
-                    <h3>تیتر اخبار از این قرار است که</h3>
+                    <h4>تیتر اخبار از این قرار است که</h4>
                     <p>حالال اینجا یه متن تقریبا دو خطی قرار میگیره تا جلوه سایت زیبا بماند</p>
                     <br>
-                    <div class="btn continue-btn"><a>ادامه مطلب</a></div>
-                    <hr class="col-xl-1">
-                </div>
-                <div class="flex-col col-xl-2">
-                    <div class="col-xl-2">
-                        <img src="content/images/t3.jpg" alt="turkey">
-                    </div>
-                    <h3>تیتر اخبار از این قرار است که</h3>
-                    <p>حالال اینجا یه متن تقریبا دو خطی قرار میگیره تا جلوه سایت زیبا بماند</p>
-                    <br>
-                    <div class="btn continue-btn"><a>ادامه مطلب</a></div>
+                    <div class="btn continue-btn"><a href="single_news.html">ادامه مطلب</a></div>
                     <hr class="col-xl-1">
                 </div>
             </div>
-            <div class="comp-card">
-                <h1>منتخب سردبیر</h1>
+            <div class="comp-card sticky">
+                <h3>منتخب سردبیر</h3>
                 <div class="flex-col col-xl-2">
                     <div class="col-xl-2">
                         <img src="content/images/t4.jpg" alt="turkey">
                     </div>
-                    <h3>تیتر اخبار از این قرار است که</h3>
+                    <h4>تیتر اخبار از این قرار است که</h4>
                     <p>حالال اینجا یه متن تقریبا دو خطی قرار میگیره تا جلوه سایت زیبا بماند</p>
                     <br>
-                    <div class="btn continue-btn"><a>ادامه مطلب</a></div>
+                    <div class="btn continue-btn"><a href="single_news.html">ادامه مطلب</a></div>
                     <hr class="col-xl-2">
                 </div>
                 <div class="flex-col col-xl-2">
                     <div class="col-xl-2">
                         <img src="content/images/t3.jpg" alt="turkey">
                     </div>
-                    <h3>تیتر اخبار از این قرار است که</h3>
+                    <h4>تیتر اخبار از این قرار است که</h4>
                     <p>حالال اینجا یه متن تقریبا دو خطی قرار میگیره تا جلوه سایت زیبا بماند</p>
                     <br>
-                    <div class="btn continue-btn"><a>ادامه مطلب</a></div>
+                    <div class="btn continue-btn"><a href="single_news.html">ادامه مطلب</a></div>
                     <hr class="col-xl-1">
                 </div>
                 <div class="flex-col col-xl-2">
                     <div class="col-xl-2">
                         <img src="content/images/t2.jpg" alt="turkey">
                     </div>
-                    <h3>تیتر اخبار از این قرار است که</h3>
+                    <h4>تیتر اخبار از این قرار است که</h4>
                     <p>حالال اینجا یه متن تقریبا دو خطی قرار میگیره تا جلوه سایت زیبا بماند</p>
                     <br>
-                    <div class="btn continue-btn"><a>ادامه مطلب</a></div>
+                    <div class="btn continue-btn"><a href="single_news.html">ادامه مطلب</a></div>
                     <hr class="col-xl-1">
                 </div>
             </div>

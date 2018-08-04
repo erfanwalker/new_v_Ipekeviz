@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#28aff8">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
     <title> ترکیه | ازمیر</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,11 +20,11 @@
 
     <!--navbar-->
 
-    <nav class="navbar">
+    <nav class="navbar overlay-on">
         <div class=" navbar-collapse-btn"><i class="fa fa-reorder"></i></div>
         <div class="navbar--menu">
             <ul>
-                <li>
+                <li class="active">
                     <a href="index.html"><i class="fa fa-home"></i></a>
                 </li>
                 <li>
@@ -59,7 +62,7 @@
             <input name="search" id="search" type="search" class="input-search" placeholder=" جسنجو ">
         </div>
     </nav>
-    <div class="m-navbar--menu">
+    <div class="m-navbar--menu overlay-on">
         <ul>
             <li>
                 <a href="index.html"><i class="fa fa-home"></i></a>
@@ -98,7 +101,7 @@
 
     <!-- main content -->
     <div class="main--content">
-        <div class="intro">
+        <div class="intro auto-height">
             <div class="intro--caption--container">
                 <h1 class="intro--h1">تمامی خدمات روزگار رفتار کسی میباشد.</h1>
                 <h4 class="intro--h4">از آنجایی که طراحان عموما نویسنده متن نیستند و وظیفه رعایت حق تکثیر متون را ندارند</h4>
@@ -134,7 +137,7 @@
                 </div>
             </div>
         </div>
-        <article>
+        <article class="auto-height">
             <section class="flex-col flex-wrap col-xl-2 sec-book">
                 <div class="col-xl-2 flex-row flex-wrap flex-j-b sec-book first">
                     <div class="col-md-1 m-col-xl-2 xl-pad anim-book-txt">
@@ -189,7 +192,7 @@
 
 
             <!--sec 2-->
-            <section class="sec-2 flex-row flex-wrap flex-c m-flex-col">
+            <section class="sec-2 flex-row flex-wrap flex-c m-flex-col auto-height">
                 <div class="flex-card flex-col fit-content txt-center m-col-xl-2  first">
                     <div class="top">
                         <h1>واحد های ۳ خوابه</h1>
@@ -197,7 +200,7 @@
                     </div>
                     <div class="middle">
                         <div class="price b-blue">
-                            <p>490,000</p>
+                            <p class="txt-center">490,000</p>
                         </div>
                     </div>
                     <div class="bottom">
@@ -233,7 +236,8 @@
             </section>
             <!--sec 2 end-->
         </article>
-        <div class="flex-col col-xl-2 flex-wrap flex-c auto-height">
+
+        <div class="flex-col col-xl-2 flex-wrap flex-c auto-height" style="margin-top: 6px;">
             <div class="flex-col flex-c col-xl-2 auto-height">
 
                 <div class="pos-rel col-xl-2 txt-center h-center">
@@ -250,8 +254,8 @@
                                 <div class="sm-pad"><i class="fa fa-calender"> 1397/6/3 </i></div>
                             </div>
                         </div>
-                        <div>
-                            <h3>تیتر خبر اینجا قرار میگیرد</h3>
+                        <div class="sm-pad">
+                            <h3><a href="single_news.html">تیتر خبر اینجا قرار میگیرد</a></h3>
                         </div>
                     </div>
                     <div class="i-card col-sm-1 m-col-xl-2 auto-height">
@@ -263,8 +267,8 @@
                                 <div class="sm-pad"><i class="fa fa-calender"> 1397/6/3 </i></div>
                             </div>
                         </div>
-                        <div>
-                            <h3>تیتر خبر اینجا قرار میگیرد</h3>
+                        <div class="sm-pad">
+                            <h3><a href="single_news.html">تیتر خبر اینجا قرار میگیرد</a></h3>
                         </div>
                     </div>
                     <div class="i-card col-sm-1 m-col-xl-2 auto-height">
@@ -276,8 +280,8 @@
                                 <div class="sm-pad"><i class="fa fa-calender"> 1397/6/3 </i></div>
                             </div>
                         </div>
-                        <div>
-                            <h3>تیتر خبر اینجا قرار میگیرد</h3>
+                        <div class="sm-pad">
+                            <h3><a href="single_news.html">تیتر خبر اینجا قرار میگیرد</a></h3>
                         </div>
                     </div>
                 </div>
@@ -303,7 +307,7 @@
                             </div>
                         </div>
                         <div class="sm-pad i-border">
-                            <h3>تیتر خبر اینجا قرار میگیرد</h3>
+                            <h3><a href="single_news.html">تیتر خبر اینجا قرار میگیرد</a></h3>
                             <p class="txt-justify">استفاده از طراحان گرافیک است. چاپگره و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
                         </div>
                     </div>
@@ -317,7 +321,7 @@
                             </div>
                         </div>
                         <div class="sm-pad i-border">
-                            <h3>تیتر خبر اینجا قرار میگیرد</h3>
+                            <h3><a href="single_news.html">تیتر خبر اینجا قرار میگیرد</a></h3>
                             <p class="txt-justify">استفاده از طراحان گرافیک است. چاپگره و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
                         </div>
                     </div>
@@ -331,7 +335,7 @@
                             </div>
                         </div>
                         <div class="sm-pad i-border">
-                            <h3>تیتر خبر اینجا قرار میگیرد</h3>
+                            <h3><a href="single_news.html">تیتر خبر اینجا قرار میگیرد</a></h3>
                             <p class="txt-justify">استفاده از طراحان گرافیک است. چاپگره و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
                         </div>
                     </div>
@@ -345,7 +349,7 @@
                             </div>
                         </div>
                         <div class="sm-pad i-border">
-                            <h3>تیتر خبر اینجا قرار میگیرد</h3>
+                            <h3><a href="single_news.html">تیتر خبر اینجا قرار میگیرد</a></h3>
                             <p class="txt-justify">استفاده از طراحان گرافیک است. چاپگره و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
                         </div>
                     </div>

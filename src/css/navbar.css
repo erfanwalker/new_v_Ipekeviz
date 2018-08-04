@@ -88,6 +88,21 @@ nav.hidden {
     /* border-bottom: 1px solid #84faaf00; */
 }
 
+.navbar .navbar--menu>ul li.active {
+    background-image: -webkit-linear-gradient(330deg, #84fab0 0%, #8fd3f4 100%);
+    background-image: -o-linear-gradient(330deg, #84fab0 0%, #8fd3f4 100%);
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 15%;
+    background-position: 95% 13%;
+    background-origin: border-box;
+}
+
+.navbar .navbar--menu>ul li:first-of-type {
+    font-size: 18px;
+    padding: 1px 8px 0px 8px;
+}
+
 .navbar .navbar--menu ul li a {
     display: inline-block;
     padding-top: 10px;
