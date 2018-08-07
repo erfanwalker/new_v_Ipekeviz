@@ -212,6 +212,7 @@
         -moz-border-radius: 0px 2px 2px 0px;
         -ms-border-radius: 0px 2px 2px 0px;
         -o-border-radius: 0px 2px 2px 0px;
+        padding: 8px 15px;
     }
     
     .footer button:hover {
@@ -228,6 +229,7 @@
         -moz-border-radius: 2px 0px 0px 2px;
         -ms-border-radius: 2px 0px 0px 2px;
         -o-border-radius: 2px 0px 0px 2px;
+        padding: 8px 15px;
     }
     
     @media only screen and (max-width: 720px) {

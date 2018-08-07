@@ -118,7 +118,7 @@ $(document).ready(() => {
             scrollPos = curScrollPos;
         }
         let btnScrollUpFade = (scrlTop) => {
-            if (scrlTop >= 300) { // If page is scrolled more than 50px
+            if (scrlTop >= 800) { // If page is scrolled more than 50px
                 $('.button--scroll-up').fadeIn(200); // Fade in the arrow
             } else {
                 $('.button--scroll-up').fadeOut(200); // Else fade out the arrow
