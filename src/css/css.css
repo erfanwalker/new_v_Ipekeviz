@@ -289,6 +289,10 @@ h3 a {
     color: black;
 }
 
+.c-white {
+    color: white;
+}
+
 .site {
     margin-top: 50px;
     height: auto;
