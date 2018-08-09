@@ -53,7 +53,16 @@ $(document).ready(() => {
         $('.navbar-collapse-btn').click(() => {
             $('.m-navbar--menu').slideToggle('medium');
             inputSearchSlideUp();
-
+        });
+        $(".gallery div").click(() => {
+            $(".gallery-modal").removeClass("modal-disp-none");
+            $(".gallery-modal").addClass("modal-container");
+            $(".dark-overlay").fadeIn("medium");
+        });
+        $(".dark-overlay").click(() => {
+            $(".gallery-modal").removeClass("modal-container");
+            $(".gallery-modal").addClass("modal-disp-none");
+            $(".dark-overlay").fadeOut("medium");
         });
         $('.m-drop-down').click(() => {
             mDropDown();
@@ -199,174 +208,5 @@ $(document).ready(() => {
         introh4.addClass('intro--h4--anim');
         introCaption.addClass('abs-md-container-anim');
     })();
-
-});
-
-
-
-
-
-
-
-
-
-
-
-
-(function() {
-
-
-    $('.sec-2 .flex-card').hover(
-        function() {
-            let card = $(this);
-            let base = card.parent();
-            let pos = card.position();
-
-            if (card.hasClass('first')) {
-                base.css('background-position', '0%');
-                base.css('background-image', 'linear-gradient(#01a6db 0%, rgb(15, 36, 126) 100%)')
-                base.css('background-repeat', "no-repeat");
-                base.css('background-size', '100% 100%');
-                $(this).siblings().animate({ opacity: 0 }, 200);
-            } else if (card.hasClass('second')) {
-                base.css('background-position', '0%');
-                base.css('background-image', 'linear-gradient(rgb(163, 25, 25) 0%, rgb(72, 15, 95) 100%)')
-                base.css('background-repeat', "no-repeat");
-                base.css('background-size', '100% 100%');
-                $(this).siblings().animate({ opacity: 0 }, 200);
-            }
-        },
-        function() {
-
-
-
-
-            let card = $(this);
-            let base = card.parent();
-            let pos = card.position();
-            if (card.hasClass('first')) {
-                base.css('background-position-x', pos.left + 25);
-                base.css('background-position-y', "50%");
-                base.css('background-image', 'linear-gradient(#01a6db 0%, rgb(15, 36, 126) 100%)')
-                base.css('background-repeat', "no-repeat");
-                var fwidth = $('.sec-2 .flex-card.first').width();
-                var fheight = $('.sec-2 .flex-card.first').height();
-                var fbg_size = "" + fwidth + "px " + fheight + "px";
-                base.css('background-size', fbg_size);
-                $(this).siblings().stop().animate({ opacity: 1 }, 200);
-            } else if ($(this).hasClass('second')) {
-                base.css('background-position-x', pos.left + 25);
-                base.css('background-position-y', "50%");
-                base.css('background-image', 'linear-gradient(rgb(163, 25, 25) 0%, rgb(72, 15, 95) 100%)')
-                base.css('background-repeat', "no-repeat");
-                var swidth = $('.sec-2 .flex-card.second').width();
-                var sheight = $('.sec-2 .flex-card.second').height();
-                var sbg_size = "" + swidth + "px " + sheight + "px";
-                base.css('background-size', sbg_size);
-                $(this).siblings().stop().animate({ opacity: 1 }, 200);
-            }
-        }
-    );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-})();
-$(document).ready(function() {
-    var fwidth = $('.sec-2 .flex-card.first').width();
-    var swidth = $('.sec-2 .flex-card.second').width();
-    var fheight = $('.sec-2 .flex-card.first').height();
-    var sheight = $('.sec-2 .flex-card.second').height();
-    var fbg_size = "" + fwidth + "px " + fheight + "px";
-    var sbg_size = "" + swidth + "px " + sheight + "px";
-    var fpos = $('.sec-2 .flex-card.first').position();
-    var spos = $('.sec-2 .flex-card.second').position();
-    $('.sec-2 .flex-card.first').parent().css('background-position-x', fpos.left + 25);
-    $('.sec-2 .flex-card.first').parent().css('background-position-y', "50%");
-    $('.sec-2 .flex-card.second').parent().css('background-position-x', spos.left + 25);
-    $('.sec-2 .flex-card.second').parent().css('background-position-y', "50%");
-    $('.sec-2 .flex-card.first').parent().css('background-size', fbg_size);
-    $('.sec-2 .flex-card.second').parent().css('background-size', sbg_size);
-    var first_elem_top_offset;
-    var second_elem_top_offset;
-    var third_elem_top_offset;
-    var forth_elem_top_offset;
-    var first_elem_h;
-    var second_elem_h;
-    var third_elem_h;
-    var forth_elem_h;
-    first_elem_top_offset = $('.first').offset().top;
-    second_elem_top_offset = $('.second').offset().top;
-    third_elem_top_offset = $('.third').offset().top;
-    forth_elem_top_offset = $('.forth').offset().top;
-
-    first_elem_h = $('.first').height();
-    second_elem_h = $('.second').height();
-    third_elem_h = $('.third').height();
-    forth_elem_h = $('.forth').height();
-    console.log("f", first_elem_top_offset, "se", second_elem_top_offset);
-
-    $(window).resize(function() {
-        first_elem_top_offset = $('.first').offset().top;
-        second_elem_top_offset = $('.second').offset().top;
-        third_elem_top_offset = $('.third').offset().top;
-        forth_elem_top_offset = $('.forth').offset().top;
-
-        first_elem_h = $('.first').height();
-        second_elem_h = $('.second').height();
-        third_elem_h = $('.third').height();
-        forth_elem_h = $('.forth').height();
-
-        var fwidth = $('.sec-2 .flex-card.first').width();
-        var swidth = $('.sec-2 .flex-card.second').width();
-        var fheight = $('.sec-2 .flex-card.first').height();
-        var sheight = $('.sec-2 .flex-card.second').height();
-        var fbg_size = "" + fwidth + "px " + fheight + "px";
-        var sbg_size = "" + swidth + "px " + sheight + "px";
-        var fpos = $('.sec-2 .flex-card.first').position();
-        var spos = $('.sec-2 .flex-card.second').position();
-        $('.sec-2 .flex-card.first').parent().css('background-position-x', fpos.left + 25);
-        $('.sec-2 .flex-card.first').parent().css('background-position-y', "50%");
-        $('.sec-2 .flex-card.second').parent().css('background-position-x', spos.left + 25);
-        $('.sec-2 .flex-card.second').parent().css('background-position-y', "50%");
-        $('.sec-2 .flex-card.first').parent().css('background-size', fbg_size);
-        $('.sec-2 .flex-card.second').parent().css('background-size', sbg_size);
-    });
-    $(document).on('scroll', function() {
-        var currentScrollTop = $(window).scrollTop();
-        console.log('h', first_elem_h, 's-h', second_elem_h);
-        console.log('of', first_elem_top_offset, 's-o', second_elem_top_offset, 'c-s', currentScrollTop);
-        if (currentScrollTop >= ((first_elem_top_offset - first_elem_h) - (first_elem_h / 3))) {
-            $('.anim-book-txt:eq(0)').addClass('anim-book-txt-anim');
-            $('.inner:eq(0)').addClass('inner-d');
-            $('.anim-book-img:eq(0)').addClass('anim-book-img-anim');
-        }
-        if (currentScrollTop >= (third_elem_top_offset - third_elem_h) - (third_elem_h / 2)) {
-            $('.anim-book-txt-alt:eq(0)').addClass('anim-book-txt-anim');
-            $('.inner:eq(1)').addClass('inner-d');
-            $('.anim-book-img-alt:eq(0)').addClass('anim-book-img-anim');
-        }
-        if (currentScrollTop >= (second_elem_top_offset - second_elem_h) - (second_elem_h / 3)) {
-            $('.anim-op').addClass('anim-op-anim');
-        }
-        if (currentScrollTop >= (forth_elem_top_offset - forth_elem_h) - (forth_elem_h / 3)) {
-            $('.anim-book-txt:eq(1)').addClass('anim-book-txt-anim');
-            $('.inner:eq(2)').addClass('inner-d');
-            $('.anim-book-img:eq(1)').addClass('anim-book-img-anim');
-        }
-    });
 
 });

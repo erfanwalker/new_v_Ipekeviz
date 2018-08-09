@@ -22,7 +22,7 @@
     display: flex;
     direction: rtl;
     width: 100%;
-    height: 40px;
+    height: 46px;
     background-color: #fafafa;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -32,6 +32,7 @@
     align-items: center;
     z-index: 1000;
     top: 0px;
+    -webkit-box-shadow: 0px 1px 25px -6px black;
     box-shadow: 0px 1px 25px -6px black;
     -webkit-transition: -webkit-transform 0.4s ease;
     transition: -webkit-transform 0.4s ease;
@@ -79,7 +80,8 @@ nav.hidden {
     background-position: 95% 75%;
     background-origin: border-box;
     text-align: center;
-    line-height: 18px;
+    -webkit-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
     transition: all .25s ease-in;
     -webkit-transition: all .25 ease-in;
     -moz-transition: all 0.25s ease-in;
@@ -93,10 +95,16 @@ nav.hidden {
     background-image: -o-linear-gradient(330deg, #84fab0 0%, #8fd3f4 100%);
     background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
     background-repeat: no-repeat;
+    margin-top: 2px;
     background-size: 100% 15%;
     background-position: 95% 100%;
     background-origin: border-box;
     /* border-bottom: 5px solid blue; */
+}
+
+.navbar .navbar--menu>ul li.active:hover {
+    transform: none;
+    box-shadow: none;
 }
 
 .navbar .navbar--menu>ul li:first-of-type {
@@ -107,6 +115,8 @@ nav.hidden {
 .navbar .navbar--menu ul li a {
     display: inline-block;
     padding-top: 10px;
+    height: 100%;
+    width: 100%;
 }
 
 .navbar ul li:hover {
@@ -118,38 +128,49 @@ nav.hidden {
     -moz-transform: translateY(2px);
     -ms-transform: translateY(2px);
     -o-transform: translateY(2px);
+    cursor: pointer;
 }
 
 .drop-down-item {
     background: #fafafa;
     position: absolute;
     right: 0px;
-    top: 36px;
+    top: 41px;
     display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     min-width: 190px;
-    padding: 4px 5px 12px 5px;
     width: auto;
     border-radius: 3px 0px 3px 3px;
     text-align: center;
+    border-top: 4px solid #2cd6aa;
 }
 
 .drop-down-item ul {
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    -webkit-padding-start: 0px;
 }
 
 .drop-down-item li {
     display: block;
-    line-height: 1.2em;
-    padding: 0;
-    padding: 4px 4px 11px 4px;
-    width: 95%;
-    margin: 0px auto;
+    line-height: 30px;
+    padding: 0px;
+    width: 100%;
+    margin: -0px auto;
     text-align: center;
 }
 
 .drop-down-item li a {
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 6px;
     display: block;
+    width: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .navbar .navbar--search {
@@ -190,11 +211,17 @@ nav.hidden {
     transform-origin: left;
 }
 
+.navbar--search button:hover {
+    cursor: pointer;
+}
+
 .input-search {
     border-bottom-left-radius: 4px;
     position: absolute;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
-    top: 39px;
+    top: 46px;
     left: 0px;
     margin: 0px;
     padding: 0px 3px;
@@ -244,10 +271,12 @@ nav.hidden {
         top: 2px;
         padding: 3px 6px;
         border-radius: 3px;
+        -webkit-box-shadow: 0px 0px 5px grey;
         box-shadow: 0px 0px 5px grey;
         border: 1px solid grey;
     }
     .navbar .navbar-collapse-btn:hover {
+        -webkit-box-shadow: 0px 0px 5px inset grey;
         box-shadow: 0px 0px 5px inset grey;
     }
     .navbar--menu {
@@ -264,6 +293,7 @@ nav.hidden {
         display: none;
         z-index: 500;
         border-radius: 0px 0px 15px 15px;
+        -webkit-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.85);
         box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.85);
         font-weight: 550;
         overflow: hidden;
@@ -288,8 +318,11 @@ nav.hidden {
         background-size: 100% 0;
         background-position: 100% 50%;
         background-origin: border-box;
+        -webkit-box-shadow: none;
         box-shadow: none;
         text-align: center;
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
         transition: all .5s ease;
     }
     .m-navbar--menu ul li a {
@@ -298,13 +331,21 @@ nav.hidden {
         color: #3b112a;
     }
     .m-navbar--menu>ul li:hover {
+        -webkit-transform: translateZ(100px);
         transform: translateZ(100px);
         background-size: 100% 100%;
+        -webkit-box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.85);
         box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.85);
     }
     .fa-sort-down {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
         transform: rotate(0deg);
+        -webkit-transform-origin: center;
+        -ms-transform-origin: center;
         transform-origin: center;
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
         transition: all .3s ease;
     }
     .input-search {

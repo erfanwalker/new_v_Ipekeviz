@@ -1,4 +1,4 @@
-i a {
+﻿i a {
     color: rgb(124, 124, 124);
     border-bottom: 1px dotted rgb(124, 124, 124);
     margin: 0px 4px 0px 2px;
@@ -52,6 +52,9 @@ input {
     background: -webkit-gradient(linear, left top, right top, from(red), to(black));
     background: -webkit-linear-gradient(left, red, black);
     background: -o-linear-gradient(left, red, black);
+    background: -webkit-gradient(linear, right top, left top, from(rgb(170, 6, 0)), to(black));
+    background: -webkit-linear-gradient(right, rgb(170, 6, 0), black);
+    background: -o-linear-gradient(right, rgb(170, 6, 0), black);
     background: linear-gradient(to left, rgb(170, 6, 0), black);
     margin-top: -8px;
     margin-bottom: 8px;
