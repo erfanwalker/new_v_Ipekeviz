@@ -13,6 +13,59 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/gallery.css">
     <title>آخرین قوانین</title>
+    <style>
+        .modal-img {
+            opacity: 0;
+            transform-origin: center;
+            transition: all 2s ease;
+        }
+        
+        .prev {
+            transform: translateX(-65%) rotateY(-50deg);
+        }
+        
+        .next {
+            transform: translateX(45%) rotateY(50deg);
+        }
+        
+        .img-modal {
+            transform-style: preserve-3d;
+            perspective: 1800px;
+            perspective-origin: center;
+        }
+        
+        .modal-img.active {
+            opacity: 1;
+            transform: translateX(0%) rotateY(0deg);
+        }
+        
+        .modal-img.deactive-next {
+            opacity: .3;
+            transform: translateX(80%) translateZ(-700px) rotateY(70deg);
+        }
+        
+        .modal-img.deactive-prev {
+            opacity: .3;
+            transform: translateX(-80%) translateZ(-700px) rotateY(290deg);
+        }
+        
+        .gl div {
+            height: fit-content;
+            z-index: 1;
+            transition: all .9s ease-in-out;
+            cursor: zoom-in;
+        }
+        
+        .gl div:hover {
+            transform: scale(1.7);
+            z-index: 100;
+            box-shadow: 0px 12px 18px black;
+        }
+        
+        .gl div.blur {
+            filter: blur(2px);
+        }
+    </style>
 </head>
 
 <body>
@@ -99,25 +152,24 @@
     <!--navbar end-->
 
     <!--main content-->
-    <section class="site flex-row flex-wrap flex-c gallery">
-        <div><img src="content/images/turkey10.jpg" alt="turkey"></div>
-        <div><img src="content/images/turkey16.jpg" alt="turkey"></div>
-        <div><img src="content/images/turkey6.jpg" alt="turkey"></div>
-        <div><img src="content/images/turkey13.jpg" alt="turkey"></div>
-        <div><img src="content/images/turkey11.jpg" alt="turkey"></div>
-        <div><img src="content/images/turkey17.jpg" alt="turkey"></div>
-        <div><img src="content/images/turkey4.jpg" alt="turkey"></div>
-        <div><img src="content/images/turkey2.jpg" alt="turkey"></div>
-        <div><img src="content/images/turkey3.jpg" alt="turkey"></div>
-        <div><img src="content/images/turkey12.jpg" alt="turkey"></div>
-        <div><img src="content/images/turkey9.jpg" alt="turkey"></div>
-        <div><img src="content/images/turkey8.jpg" alt="turkey"></div>
-        <div><img src="content/images/turkey6.jpg" alt="turkey"></div>
+    <section class="site flex-row flex-wrap gallery gl">
+        <div data-index=1><img src="content/images/turkey1.jpg" alt="turkey"></div>
+        <div data-index=2><img src="content/images/turkey2.jpg" alt="turkey"></div>
+        <div data-index=3><img src="content/images/turkey3.jpg" alt="turkey"></div>
+        <div data-index=4><img src="content/images/turkey4.jpg" alt="turkey"></div>
+        <div data-index=4><img src="content/images/turkey5.jpg" alt="turkey"></div>
+        <div data-index=4><img src="content/images/turkey6.jpg" alt="turkey"></div>
+        <div data-index=4><img src="content/images/turkey7.jpg" alt="turkey"></div>
+        <div data-index=4><img src="content/images/turkey8.jpg" alt="turkey"></div>
+        <div data-index=4><img src="content/images/turkey9.jpg" alt="turkey"></div>
+        <div data-index=4><img src="content/images/turkey10.jpg" alt="turkey"></div>
     </section>
+
     <div class="modal-disp-none fit-content gallery-modal">
-        <div data-disposable="false"><img src="content/images/turkey4.jpg" alt="turkey"></div>
-        <div data-disposable="false" class="btn-modal-pre"><i class="fa fa-chevron-left"></i></div>
-        <div data-disposable="false" class="btn-modal-next"><i class="fa fa-chevron-right"></i></div>
+        <div data-disposable="false" class="btn-modal-pre" style="z-index: 10000;"><i class="fa fa-chevron-left fa-2x c-white"></i></div>
+        <div data-disposable="false" class="btn-modal-next" style="z-index: 10000;"><i class="fa fa-chevron-right fa-2x c-white"></i></div>
+        <div class="pos-abs right-top lg-pad xs-marg btn-close" style="z-index: 10000;"><i class="fa fa-close fa-2x c-white"></i></div>
+        <div class="img-modal" data-disposable="false" style="overflow: visible;"></div>
     </div>
     <div class="dark-overlay"></div>
 
@@ -249,6 +301,97 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        var index = 0;
+        let i;
+        var maxindex = $('.gl > div').length;
+
+        $(".gallery div").click(function() {
+            $(".gallery-modal").removeClass("modal-disp-none");
+            $(".gallery-modal").addClass("modal-container");
+            $(".dark-overlay").fadeIn("medium");
+            i = this.dataset.index;
+            $(".img-modal").empty().append('<img class="modal-img" data-pos="0" src="content/images/turkey' + i + '.jpg" alt="turkey">');
+            $(".img-modal img").addClass("active");
+        });
+        $(".btn-close").click(function() {
+            $(".gallery-modal").addClass("modal-disp-none");
+            $(".gallery-modal").removeClass("modal-container");
+            $(".dark-overlay").fadeOut("medium");
+        });
+
+        let onProgress = false;
+        $(".btn-modal-next").click(function() {
+            if (onProgress)
+                return;
+            onProgress = true;
+            i = parseInt(i);
+            i = i < maxindex ? i + 1 : 1;
+            let imageContainer = $(this).parent().children(".img-modal");
+
+            imageContainer.children().each(function() {
+                if (this.dataset.pos == "-1") {
+                    // $(this).addClass('active');
+                } else if (this.dataset.pos == "0") {
+                    $(this).addClass("deactive-next");
+                }
+            });
+
+            let timer = setInterval(() => {
+                imageContainer.children().each(function() {
+                    if (this.dataset.pos == "0") {
+                        $(this).remove();
+                    }
+                });
+
+                imageContainer.append('<img class="modal-img prev" data-pos="-1" src="content/images/turkey' + i + '.jpg" alt="turkey">');
+                let activeTimer = setInterval(function() {
+                    imageContainer.children().addClass("active");
+                    clearInterval(activeTimer);
+                }, 100);
+                imageContainer.children("img").attr("data-pos", "0");
+                clearInterval(timer);
+                onProgress = false;
+            }, 1200);
+
+        });
+        $(".btn-modal-pre").click(function() {
+            if (onProgress)
+                return;
+            onProgress = true;
+            i = parseInt(i);
+            i = i < maxindex ? i + 1 : 1;
+            let imageContainer = $(this).parent().children(".img-modal");
+
+            imageContainer.children().each(function() {
+                if (this.dataset.pos == "-1") {
+                    // $(this).addClass('active');
+                } else if (this.dataset.pos == "0") {
+                    $(this).addClass("deactive-prev");
+                }
+            });
+
+            let timer = setInterval(() => {
+                imageContainer.children().each(function() {
+                    if (this.dataset.pos == "0") {
+                        $(this).remove();
+                    }
+                });
+
+                imageContainer.append('<img class="modal-img next" data-pos="-1" src="content/images/turkey' + i + '.jpg" alt="turkey">');
+                let activeTimer = setInterval(function() {
+                    imageContainer.children().addClass("active");
+                    clearInterval(activeTimer);
+                }, 100);
+                imageContainer.children("img").attr("data-pos", "0");
+                clearInterval(timer);
+                onProgress = false;
+            }, 1200);
+        });
+        $(".gl div").hover(function() {
+            $(this).siblings().toggleClass("blur");
+        });
+    </script>
 </body>
 
 </html>

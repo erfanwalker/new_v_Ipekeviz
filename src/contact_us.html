@@ -12,6 +12,59 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
     <title>ارتباط با ما</title>
+    <style>
+        textarea {
+            resize: none;
+        }
+        
+        .sm-marg {
+            margin: 6px;
+        }
+        
+        .contact-us input,
+        .contact-us textarea {
+            background: transparent;
+            color: rgb(41, 41, 41);
+            border: 1px solid rgb(0, 89, 255);
+            border-radius: 1px;
+            transition: all .6s ease;
+        }
+        
+        .contact-us button {
+            color: white;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 1px;
+            transition: all .6s ease;
+            background: rgb(62, 142, 179);
+        }
+        
+        .contact-us button:hover {
+            background: rgb(3, 118, 185);
+        }
+        
+        .contact-us input:focus,
+        .contact-us textarea:focus,
+        .contact-us button:focus {
+            border-color: rgb(17, 27, 31);
+            box-shadow: 0px 0px 8px inset rgb(2, 37, 49);
+            outline: none;
+        }
+        
+        .contact-us.round {
+            border-radius: 50%;
+            font-size: 1.5em;
+            width: 85px;
+            color: white;
+            height: 85px;
+            background: #292F36;
+            text-align: center;
+        }
+        
+        .caption-border-b-b {
+            border-bottom: 2px solid #83add4;
+        }
+    </style>
 </head>
 
 <body>
@@ -98,19 +151,43 @@
     <!--navbar end-->
 
     <!--main content-->
-    <article class="site">
-        <section class="contact-us flex-row flex-wrap flex-c row-xl-1">
-            <div class="col-sm-1 m-col-xl-2">
-                <h2 class="txt-center"><i class="fa fa-phone"></i>شماره دفتر</h2>
+    <article class="site col-xl-2 auto-height flex-col Contact-us">
+        <h2 class="caption-border-b-b h-center fit-content sm-marg md-pad">
+            با ما در ارتباط باشید
+        </h2>
+        <section class="flex-row flex-c h-center flex-wrap col-xl-1 sm-marg">
+            <section class="flex-col flex-c flex-wrap col-md-1 m-col-xl-2">
+                <form class="flex-col flex-c flex-wrap col-xl-2">
+                    <input class="col-xl-1 md-pad sm-marg" type="text" placeholder="نام" required>
+                    <input class="col-xl-1 md-pad sm-marg" type="text" placeholder="شماره تماس">
+                    <input class="col-xl-1 md-pad sm-marg" type="email" placeholder="ایمیل" required>
+                    <textarea class="col-xl-1 md-pad sm-marg" rows="4" placeholder="پیام"></textarea>
+                    <button type="submit" class="col-xl-1 lg-pad xs-marg">ثبت</button>
+                </form>
+            </section>
+            <section class="flex-col flex-c flex-wrap col-md-1 m-col-xl-2">
+                <span>MAP</span>
+            </section>
+        </section>
+        <section class="contact-us flex-row flex-wrap flex-c auto-height sm-marg" style="margin-top: 85px">
+            <div class="col-sm-1 m-col-xl-2 flex-col flex-c sm-marg" style="align-self: baseline">
+                <div class="contact-us round flex-row flex-c"><i class="fa fa-phone"></i></div>
+                <h3 class="sm-marg">با ما در تماس باشید</h3>
+                <div class="caption-border-b-b col-xs-2 xs-marg"></div>
                 <p class="txt-center">+21-5425-3221</p>
             </div>
-            <div class="col-sm-1 m-col-xl-2">
-                <h2 class="txt-center"><i class="fa fa-location-arrow"></i>آدرس شرکت</h2>
-                <p class="txt-center">تهران-خیابان شریعتی-دفتر مرکزی</p>
+            <div class="col-sm-1 m-col-xl-2 flex-col flex-c sm-marg" style="align-self: baseline">
+                <div class="contact-us round flex-row flex-c"><i class="fa fa-envelope"></i></div>
+                <h3 class="sm-marg">ایمیل</h3>
+                <div class="caption-border-b-b col-xs-2 xs-marg"></div>
+                <p class="txt-center">info@egeyar.com</p>
             </div>
-            <div class="col-sm-1 m-col-xl-2">
-                <h2 class="txt-center"><i class="fa fa-mail-forwardl"></i>ادرس ایمیل</h2>
-                <p class="txt-center">erfankaboli.ce@gmail.com</p>
+            <div class="col-sm-1 m-col-xl-2 flex-col flex-c sm-marg" style="align-self: baseline">
+                <div class="contact-us round flex-row flex-c"><i class="fa fa-location-arrow"></i></div>
+                <h3 class="sm-marg">آدرس</h3>
+                <div class="caption-border-b-b col-xs-2 xs-marg"></div>
+                <p class="txt-center">تهران، اتوبان ستاری، خیابان پیامبر غربی، بلوار مطهری، کوچه چهارم شرقی، پلاک 2، ساختمان نور، واحد 9</p>
+
             </div>
         </section>
     </article>

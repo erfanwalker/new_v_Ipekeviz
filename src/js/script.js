@@ -54,11 +54,7 @@ $(document).ready(() => {
             $('.m-navbar--menu').slideToggle('medium');
             inputSearchSlideUp();
         });
-        $(".gallery div").click(() => {
-            $(".gallery-modal").removeClass("modal-disp-none");
-            $(".gallery-modal").addClass("modal-container");
-            $(".dark-overlay").fadeIn("medium");
-        });
+
         $(".dark-overlay").click(() => {
             $(".gallery-modal").removeClass("modal-container");
             $(".gallery-modal").addClass("modal-disp-none");

@@ -1,4 +1,4 @@
-section {
+section.gl {
     padding: .5vw;
     font-size: 0;
     width: 85%;
@@ -14,7 +14,7 @@ section {
     display: flex;
 }
 
-section div {
+section.gl div {
     -webkit-box-flex: auto;
     -ms-flex: auto;
     flex: auto;
@@ -22,7 +22,7 @@ section div {
     margin: .5vw;
 }
 
-section div img {
+section.gl div img {
     width: 100%;
     height: auto;
 }
@@ -93,10 +93,10 @@ section div img {
 }
 
 @media screen and (max-width: 400px) {
-    section div {
+    section.gl div {
         margin: 0px;
     }
-    section {
+    section.gl {
         padding: 0;
     }
 }

@@ -1,0 +1,315 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#28aff8">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.svg">
+    <link rel="stylesheet" href="css/css.css">
+    <title>CMS</title>
+    <style>
+        .cms {
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .cms textarea {
+            resize: vertical;
+            border: none;
+            padding: 8px;
+            margin-right: 3px;
+            width: 104%;
+        }
+        
+        .cms textarea.limited {
+            resize: none;
+        }
+        
+        .cms textarea:focus {
+            outline: none;
+        }
+        
+        .cms nav>ul {
+            height: 100%;
+            justify-content: flex-start;
+            width: 100%;
+            right: 0;
+            top: 0;
+            background: #071f35;
+        }
+        
+        .cms nav {
+            width: 19%;
+            max-width: 200px;
+            position: fixed;
+            right: 0;
+            margin: 0;
+            padding: 0px;
+            top: 45px;
+            height: 100vh;
+            background: #071f35;
+            max-width: 210px;
+            box-shadow: -2px 5px 10px black;
+            z-index: 2;
+        }
+        
+        .cms nav>ul>li {
+            padding: 10px 5px;
+            cursor: pointer;
+            margin: 0px;
+        }
+        
+        .cms nav>ul>li:hover {
+            background: linear-gradient(to left, #98a2ac, #1a3247);
+        }
+        
+        .cms nav>ul>li.active {
+            background: linear-gradient(to left, #98a2ac, #1a3247);
+            position: relative;
+        }
+        
+        .cms nav>ul>li.active::after {
+            content: "";
+            position: absolute;
+            left: -12px;
+            top: 0;
+            width: 8px;
+            border-radius: 5px 0 0 5px;
+            height: 100%;
+            background: #071f35;
+        }
+        
+        .status-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to right, #24394b, #071f35);
+            width: 100%;
+            height: 45px;
+            box-shadow: 0px 2px 10px black;
+            z-index: 1;
+        }
+        
+        .btn-sign-out {
+            cursor: pointer;
+        }
+        
+        .date-time {
+            right: 5px;
+            top: 10%;
+        }
+        
+        .nav-collapse-btn {
+            display: none;
+        }
+        
+        .iframe-container iframe {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .cms iframe {
+            right: 22%;
+            top: 55px;
+            width: 75vw;
+            height: 90vh;
+        }
+        
+        .cms-container {
+            left: 0px;
+            top: 60px;
+            position: relative;
+            margin-right: 19%;
+        }
+        
+        .cms-card {
+            background: white;
+            box-shadow: 0px 2px 6px rgba(32, 32, 32, 0.65);
+            color: rgb(43, 43, 43);
+            border-radius: 4px;
+            padding: 8px;
+            margin: 4px;
+            border-right: 0px solid rgb(16, 9, 80);
+        }
+        
+        @media only screen and (max-width: 720px) {
+            .date-time {
+                display: none;
+            }
+            .nav-collapse-btn {
+                display: block;
+                color: white;
+                position: absolute;
+                right: 0px;
+                cursor: pointer;
+            }
+            .nav-collapse-btn i {
+                border: 1px solid white;
+                padding: 6px;
+                border-radius: 5px;
+            }
+            .cms nav {
+                transition: all .6s ease;
+                position: fixed;
+                right: -230px;
+                width: 60vw;
+                max-width: 220px;
+                overflow-y: scroll;
+            }
+            .cms nav>ul>li {
+                padding: 8px 10px;
+            }
+            .cms nav.active {
+                right: 0;
+            }
+            .cms iframe {
+                right: 1vw;
+                width: 98vw;
+            }
+            .cms-overlay {
+                position: fixed;
+                top: 45;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                background: rgba(0, 0, 0, 0.85);
+                display: none;
+            }
+            .cms-container {
+                left: 0px;
+                top: 58px;
+                position: relative;
+                margin: 0 1%;
+            }
+        }
+    </style>
+</head>
+
+<body class="cms">
+
+    <nav class="flex-col flex-c flex-wrap auto-height fit-content pos-rel">
+        <ul class="flex-col row-xl-2 pos-abs">
+            <li><i class="fa fa-user"></i>
+                <a href="#">داشبورد</a>
+            </li>
+            <li><i class="fa fa-user"></i>
+                <a href="#">تنظیمات صفحه اصلی</a>
+            </li>
+            <li class="active"><i class="fa fa-user"></i>
+                <a href="#">تنظیمات سایت</a>
+            </li>
+            <li><i class="fa fa-user"></i>
+                <a href="#">محتوا</a>
+            </li>
+            <li><i class="fa fa-user"></i>
+                <a href="#">نظرات</a>
+            </li>
+            <li><i class="fa fa-user"></i>
+                <a href="#">مشاوره</a>
+            </li>
+            <li><i class="fa fa-user"></i>
+                <a href="#">پروژه ها</a>
+            </li>
+            <li><i class="fa fa-user"></i>
+                <a href="#">درباره ما</a>
+            </li>
+            <li><i class="fa fa-user"></i>
+                <a href="#">ارتباط با ما</a>
+            </li>
+            <li><i class="fa fa-user"></i>
+                <a href="#">آمار</a>
+            </li>
+            <li><i class="fa fa-user"></i>
+                <a href="#">خبر نامه</a>
+            </li>
+            <li><i class="fa fa-user"></i>
+                <a href="#">مدیریت کاربران</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="status-bar flex-row pos-rel" style="direction: ltr">
+        <div class="flex-row fit-content v-center sm-pad btn-sign-out">
+            <i class="fa fa-sign-out c-white sm-pad xs-marg"> Exit </i>
+            <i class="fa fa-user c-white sm-pad xs-marg"> Admin </i>
+        </div>
+        <div class="pos-abs fit-content h-flex-end v-center sm-pad date-time">
+            <span class="c-white">امروز : یکشنبه 4/5/1397 ساعت 11:32:54</span>
+        </div>
+        <div class="nav-collapse-btn fit-content flex-col flex-c md-pad row-xl-2">
+            <i class="fa fa-reorder"></i>
+        </div>
+    </div>
+
+    <section class="cms-container auto-height flex-col flex-wrap flex-c">
+        <div class="col-lg-2 flex-row m-col-xl-1 cms-card">
+            <span class="xs-pad fit-content">تایتل</span>
+            <span class="col-xl-1"><input class="xs-pad col-xl-2" type="text" placeholder="تایتل خبر را وارد کنید"></span>
+        </div>
+        <div class="col-lg-2 flex-row m-col-xl-1 cms-card">
+            <span class="xs-pad fit-content">آپلود عکس</span>
+            <span class="col-xl-1"><input class="xs-pad col-xl-2" type="file" placeholder="عکس اصلی را وارد کنید"></span>
+        </div>
+        <div class="col-lg-2 flex-row m-col-xl-1 cms-card">
+            <span class="xs-pad fit-content">خلاصه</span>
+            <span class="col-xl-1"><textarea rows="3" maxlength="290" class="xs-pad col-xl-2 limited" placeholder="خلاصه خبر را وارد کنید"></textarea></span>
+        </div>
+        <div class="col-lg-2 flex-row m-col-xl-1 cms-card">
+            <span class="xs-pad fit-content">متن</span>
+            <span class="col-xl-1"><textarea rows="15" class="xs-pad col-xl-2" placeholder="متن خبر را وارد کنید"></textarea></span>
+        </div>
+        <div class="col-lg-2 flex-row m-col-xl-1 cms-card">
+            <span class="xs-pad fit-content">تایتل</span>
+            <span class="col-xl-1"><input class="xs-pad col-xl-2" type="text" placeholder="تایتل مورد نظر را وارد کنید"></span>
+        </div>
+        <div class="col-lg-2 flex-row m-col-xl-1 cms-card">
+            <span class="xs-pad fit-content">تایتل</span>
+            <span class="col-xl-1"><input class="xs-pad col-xl-2" type="text" placeholder="تایتل مورد نظر را وارد کنید"></span>
+        </div>
+    </section>
+
+
+
+
+
+    <div class=" cms-overlay "></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
+    <script>
+        $(".nav-collapse-btn ").click(() => {
+            $("nav ").toggleClass("active ");
+            $(".cms-overlay ").stop(true).fadeToggle("medium ");
+        });
+        $(".cms-overlay ").click(() => {
+            $("nav ").removeClass("active ");
+            $(".cms-overlay ").stop(true).fadeOut("medium ");
+        })
+        $(".cms-card input").focusin(function() {
+            $(this).parents("div").animate({
+                borderRightWidth: 3
+            }, "fast");
+        });
+        $(".cms-card input").focusout(function() {
+            $(this).parents("div").animate({
+                borderRightWidth: 0
+            }, "fast");
+        });
+        $(".cms-card textarea").focusin(function() {
+            $(this).parents("div").animate({
+                borderRightWidth: 3
+            }, "fast");
+        });
+        $(".cms-card textarea").focusout(function() {
+            $(this).parents("div").animate({
+                borderRightWidth: 0
+            }, "fast");
+        });
+        $(".file-picker").click(function() {
+
+        });
+    </script>
+</body>
+
+</html>
