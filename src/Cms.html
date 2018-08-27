@@ -15,23 +15,23 @@
             height: 100vh;
             width: 100vw;
         }
-        
+
         .cms textarea {
             resize: vertical;
             border: none;
             padding: 8px;
             margin-right: 3px;
-            width: 104%;
+            width: 100%;
         }
-        
+
         .cms textarea.limited {
             resize: none;
         }
-        
+
         .cms textarea:focus {
             outline: none;
         }
-        
+
         .cms nav>ul {
             height: 100%;
             justify-content: flex-start;
@@ -40,7 +40,7 @@
             top: 0;
             background: #071f35;
         }
-        
+
         .cms nav {
             width: 19%;
             max-width: 200px;
@@ -55,22 +55,24 @@
             box-shadow: -2px 5px 10px black;
             z-index: 2;
         }
-        
+
+        .cms button {}
+
         .cms nav>ul>li {
             padding: 10px 5px;
             cursor: pointer;
             margin: 0px;
         }
-        
+
         .cms nav>ul>li:hover {
             background: linear-gradient(to left, #98a2ac, #1a3247);
         }
-        
+
         .cms nav>ul>li.active {
             background: linear-gradient(to left, #98a2ac, #1a3247);
             position: relative;
         }
-        
+
         .cms nav>ul>li.active::after {
             content: "";
             position: absolute;
@@ -81,7 +83,7 @@
             height: 100%;
             background: #071f35;
         }
-        
+
         .status-bar {
             position: fixed;
             top: 0;
@@ -92,39 +94,39 @@
             box-shadow: 0px 2px 10px black;
             z-index: 1;
         }
-        
+
         .btn-sign-out {
             cursor: pointer;
         }
-        
+
         .date-time {
             right: 5px;
             top: 10%;
         }
-        
+
         .nav-collapse-btn {
             display: none;
         }
-        
+
         .iframe-container iframe {
             margin: 0;
             padding: 0;
         }
-        
+
         .cms iframe {
             right: 22%;
             top: 55px;
             width: 75vw;
             height: 90vh;
         }
-        
+
         .cms-container {
             left: 0px;
             top: 60px;
             position: relative;
             margin-right: 19%;
         }
-        
+
         .cms-card {
             background: white;
             box-shadow: 0px 2px 6px rgba(32, 32, 32, 0.65);
@@ -134,7 +136,25 @@
             margin: 4px;
             border-right: 0px solid rgb(16, 9, 80);
         }
-        
+
+        .cms button {
+            margin: 12px;
+            color: white;
+        }
+
+        .cms .prim {
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+
+        .cms .prim:hover {
+            background-color: #154269;
+        }
+
+        .cms .tag {
+            margin: 2px;
+        }
+
         @media only screen and (max-width: 720px) {
             .date-time {
                 display: none;
@@ -193,40 +213,52 @@
 
     <nav class="flex-col flex-c flex-wrap auto-height fit-content pos-rel">
         <ul class="flex-col row-xl-2 pos-abs">
-            <li><i class="fa fa-user"></i>
+            <li>
+                <i class="fa fa-user"></i>
                 <a href="#">داشبورد</a>
             </li>
-            <li><i class="fa fa-user"></i>
+            <li>
+                <i class="fa fa-user"></i>
                 <a href="#">تنظیمات صفحه اصلی</a>
             </li>
-            <li class="active"><i class="fa fa-user"></i>
+            <li class="active">
+                <i class="fa fa-user"></i>
                 <a href="#">تنظیمات سایت</a>
             </li>
-            <li><i class="fa fa-user"></i>
+            <li>
+                <i class="fa fa-user"></i>
                 <a href="#">محتوا</a>
             </li>
-            <li><i class="fa fa-user"></i>
+            <li>
+                <i class="fa fa-user"></i>
                 <a href="#">نظرات</a>
             </li>
-            <li><i class="fa fa-user"></i>
+            <li>
+                <i class="fa fa-user"></i>
                 <a href="#">مشاوره</a>
             </li>
-            <li><i class="fa fa-user"></i>
+            <li>
+                <i class="fa fa-user"></i>
                 <a href="#">پروژه ها</a>
             </li>
-            <li><i class="fa fa-user"></i>
+            <li>
+                <i class="fa fa-user"></i>
                 <a href="#">درباره ما</a>
             </li>
-            <li><i class="fa fa-user"></i>
+            <li>
+                <i class="fa fa-user"></i>
                 <a href="#">ارتباط با ما</a>
             </li>
-            <li><i class="fa fa-user"></i>
+            <li>
+                <i class="fa fa-user"></i>
                 <a href="#">آمار</a>
             </li>
-            <li><i class="fa fa-user"></i>
+            <li>
+                <i class="fa fa-user"></i>
                 <a href="#">خبر نامه</a>
             </li>
-            <li><i class="fa fa-user"></i>
+            <li>
+                <i class="fa fa-user"></i>
                 <a href="#">مدیریت کاربران</a>
             </li>
         </ul>
@@ -237,40 +269,69 @@
             <i class="fa fa-user c-white sm-pad xs-marg"> Admin </i>
         </div>
         <div class="pos-abs fit-content h-flex-end v-center sm-pad date-time">
-            <span class="c-white">امروز : یکشنبه 4/5/1397 ساعت 11:32:54</span>
+
         </div>
         <div class="nav-collapse-btn fit-content flex-col flex-c md-pad row-xl-2">
             <i class="fa fa-reorder"></i>
         </div>
     </div>
 
-    <section class="cms-container auto-height flex-col flex-wrap flex-c">
+    <!-- <section class="cms-container auto-height flex-col flex-wrap flex-c">
         <div class="col-lg-2 flex-row m-col-xl-1 cms-card">
-            <span class="xs-pad fit-content">تایتل</span>
-            <span class="col-xl-1"><input class="xs-pad col-xl-2" type="text" placeholder="تایتل خبر را وارد کنید"></span>
+            <input class="xs-pad col-xl-2" type="text" placeholder="تایتل خبر را وارد کنید">
+        </div>
+        <div class="col-lg-2 flex-row m-col-xl-1 cms-card">
+            <span class="xs-pad fit-content">آپلود عکس اصلی</span>
+            <span class="col-xl-1">
+                <input class="xs-pad col-xl-2" type="file" name="image" accept="image/*">
+            </span>
+        </div>
+        <div class="col-lg-2 flex-row m-col-xl-1 cms-card">
+            <textarea rows="3" maxlength="290" class=" col-xl-2 limited" placeholder="خلاصه خبر را وارد کنید"></textarea>
+        </div>
+        <div class="col-lg-2 flex-row m-col-xl-1 cms-card">
+            <textarea rows="15" class="xs-pad col-xl-2" placeholder="متن خبر را وارد کنید"></textarea>
         </div>
         <div class="col-lg-2 flex-row m-col-xl-1 cms-card">
             <span class="xs-pad fit-content">آپلود عکس</span>
-            <span class="col-xl-1"><input class="xs-pad col-xl-2" type="file" placeholder="عکس اصلی را وارد کنید"></span>
+            <span class="col-xl-1">
+                <input class="xs-pad col-xl-2" type="file" name="image" accept="image/*">
+            </span>
         </div>
-        <div class="col-lg-2 flex-row m-col-xl-1 cms-card">
-            <span class="xs-pad fit-content">خلاصه</span>
-            <span class="col-xl-1"><textarea rows="3" maxlength="290" class="xs-pad col-xl-2 limited" placeholder="خلاصه خبر را وارد کنید"></textarea></span>
+        <div class="col-lg-2 flex-col m-col-xl-1 cms-card">
+            <div class="col-xl-2 flex-row flex-wrap">
+                <input class="xs-pad col-lg-2 m-col-lg-2 input" type="text" placeholder="تگ مربوط به خبر را وارد کنید">
+                <input class="xs-pad col-xs-1 m-col-xs-1 tag-adder" style="margin-right: -1px;border-left: 1px solid black;" type="button" value="+">
+                <input class="xs-pad col-xs-1 m-col-xs-1 tag-miner" type="button" value="-">
+            </div>
+            <div class="col-xl-2 flex-row flex-wrap sm-pad cms-tag">
+            </div>
         </div>
-        <div class="col-lg-2 flex-row m-col-xl-1 cms-card">
-            <span class="xs-pad fit-content">متن</span>
-            <span class="col-xl-1"><textarea rows="15" class="xs-pad col-xl-2" placeholder="متن خبر را وارد کنید"></textarea></span>
+        <button type="submit" class="col-xs-2 t-col-sm-1 m-col-xl-1 rounded-b md-pad prim">Post</button>
+    </section> -->
+
+
+    <!-- <section class="cms-container auto-height flex-col flex-wrap flex-c">
+        <div class="col-lg-2 flex-col flex-wrap m-col-xl-1 cms-card">
+            <div class="flex-row flex-wrap col-xl-2 flex-s-a">
+                <span>مشاوره مهاجرتی</span>
+                <span>امیر حسین</span>
+                <span>erfankaboli.ce@gmail.com</span>
+                <span>8/21/2018, 11:37:36 PM</span>
+            </div>
+            <hr class="col-xl-1">
+            <p class="xs-pad col-xl-2">سوال اینجا قرار مکیگیرد</p>
+            <textarea rows="5" class="xs-pad xs-marg" placeholder="پاسخ خود را وارد کنید"></textarea>
+            <button class="btn prim sm-pad col-xs-2 t-col-sm-2 m-col-xl-1 rounded-b h-center" type="submit">ثبت</button>
         </div>
-        <div class="col-lg-2 flex-row m-col-xl-1 cms-card">
-            <span class="xs-pad fit-content">تایتل</span>
-            <span class="col-xl-1"><input class="xs-pad col-xl-2" type="text" placeholder="تایتل مورد نظر را وارد کنید"></span>
-        </div>
-        <div class="col-lg-2 flex-row m-col-xl-1 cms-card">
-            <span class="xs-pad fit-content">تایتل</span>
-            <span class="col-xl-1"><input class="xs-pad col-xl-2" type="text" placeholder="تایتل مورد نظر را وارد کنید"></span>
+    </section> -->
+
+
+    <section class="cms-container auto-height flex-col flex-wrap flex-c">
+        <div class="col-lg-2 flex-col flex-wrap m-col-xl-1 cms-card">
+            <input type="radio" name="">
         </div>
     </section>
-
 
 
 
@@ -286,29 +347,48 @@
             $("nav ").removeClass("active ");
             $(".cms-overlay ").stop(true).fadeOut("medium ");
         })
-        $(".cms-card input").focusin(function() {
+        $(".cms-card input").focusin(function () {
             $(this).parents("div").animate({
                 borderRightWidth: 3
             }, "fast");
         });
-        $(".cms-card input").focusout(function() {
+        $(".cms-card input").focusout(function () {
             $(this).parents("div").animate({
                 borderRightWidth: 0
             }, "fast");
         });
-        $(".cms-card textarea").focusin(function() {
+        $(".cms-card textarea").focusin(function () {
             $(this).parents("div").animate({
                 borderRightWidth: 3
             }, "fast");
         });
-        $(".cms-card textarea").focusout(function() {
+        $(".cms-card textarea").focusout(function () {
             $(this).parents("div").animate({
                 borderRightWidth: 0
             }, "fast");
         });
-        $(".file-picker").click(function() {
+        $(".file-picker").click(function () {
 
         });
+        // $(".input").focusin(function(){
+        //     $(this).val("");
+        // });
+        $(".tag-adder").click(function () {
+            let tag = $(this).siblings(".input").val();
+            $(".cms-tag").append('<span class="tag xs-marg">' + tag + '</span>');
+            $(this).siblings(".input").val("");
+        });
+        $(".tag-miner").click(function () {
+            $(".cms-tag").children('span').last().remove();
+        });
+        let dt;
+        setInterval(() => {
+            $(".date-time").empty();
+            dt = new Date();
+            $(".date-time").append('<span class="c-white">' + dt.toLocaleString() + '</span>')
+
+        }, 1000);
+
     </script>
 </body>
 

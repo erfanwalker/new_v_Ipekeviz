@@ -416,6 +416,9 @@ h3 a {
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
+.flex-s-a{
+    justify-content: space-around;
+}
 
 .flex-c {
     -webkit-box-pack: center;

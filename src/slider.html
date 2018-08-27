@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>slider</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <style>
+        .slider-container{
+            width: 100%;
+            height: 100%;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .slider-container.bgimg-1{
+            background-image: url(content/images/turkey25.jpg);
+            opacity: 0;
+            transition: opacity 2s ease,background-image 2s ease;
+        }
+    </style>
+</head>
+<body>
+        <!--navbar-->
+
+        <nav class="navbar overlay-on">
+            <div class=" navbar-collapse-btn"><i class="fa fa-reorder"></i></div>
+            <div class="navbar--menu">
+                <ul>
+                    <li class="active">
+                        <a href="index.html"><i class="fa fa-home"></i></a>
+                    </li>
+                    <li>
+                        <a href="news_d_page.html">اخبار</a>
+                    </li>
+                    <li>
+                        <a href="last_rules.html">آخرین قوانین</a>
+                    </li>
+                    <li>
+                        <a href="investment opportunities.html">فرصت های سرمایه گذاری</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">گالری</a>
+                    </li>
+                    <li class="drop-down">
+                        <a>مشاوره</a>
+                        <ul class="drop-down-item">
+                            <li><a href="Immigration advice.html">مشاوره مهاجرتی</a></li>
+                            <li><a href="Academic advice.html">مشاوره تحصیلی</a></li>
+                            <li><a href="Investment Advice.html">مشاوره سرمایه گذاری</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="about_us.html">درباره ما</a>
+                    </li>
+                    <li>
+                        <a href="contact_us.html">ارتباط با ما</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar--search">
+                <button name="search" id="btn--search" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                <input name="search" id="search" type="search" class="input-search" placeholder=" جسنجو ">
+            </div>
+        </nav>
+        <div class="m-navbar--menu overlay-on">
+            <ul>
+                <li>
+                    <a href="index.html"><i class="fa fa-home"></i></a>
+                </li>
+                <li>
+                    <a href="news_d_page.html">اخبار</a>
+                </li>
+                <li>
+                    <a href="last_rules.html">آخرین قوانین</a>
+                </li>
+                <li>
+                    <a href="investment opportunities.html">فرصت های سرمایه گذاری</a>
+                </li>
+                <li>
+                    <a href="gallery.html">گالری</a>
+                </li>
+                <li class="m-drop-down">
+                    <a> مشاوره <i class="fa fa-sort-down"></i></a>
+                    <ul class="m-drop-down-item">
+                        <li><a href="Immigration advice.html">مشاوره مهاجرتی</a></li>
+                        <li><a href="Academic advice.html">مشاوره تحصیلی</a></li>
+                        <li><a href="Investment Advice.html">مشاوره سرمایه گذاری</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="about_us.html">درباره ما</a>
+                </li>
+                <li>
+                    <a href="contact_us.html">ارتباط با ما</a>
+                </li>
+            </ul>
+        </div>
+        <div class="overlay"> </div>
+    
+        <!--navbar end-->
+        <div class="slider-container bgimg-1">
+            <div>
+
+            </div>
+        </div>
+        
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+    $('.slider-container.bgimg-1').animate({opacity:1},"slow");
+    var i=1;
+    setInterval(()=>{
+        i+=1;
+        $('.slider-container.bgimg-1').css("backgroundImage","url(content/images/turkey"+i+".jpg)")
+    
+    },5000);
+    </script>
+</body>
+</html>
